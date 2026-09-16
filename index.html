@@ -41,16 +41,42 @@
         margin-left: 10px;
       }
 
-      .skill-mf .progress {
-        /* background-color: #cde1f8; */
-        margin: 0.5rem 0 1.2rem;
-        border-radius: 0;
-        height: 0.7rem;
+      .skill-mf .skill-group {
+        margin-bottom: 1.1rem;
       }
 
-      .skill-mf .progress .progress-bar {
-        height: 0.7rem;
-        background-color: #ffbd39;
+      .skill-mf .skill-group h4 {
+        font-size: 0.72rem;
+        font-weight: 600;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: #ffbd39;
+        margin: 0 0 0.5rem;
+      }
+
+      .skill-mf .skill-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.4rem;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      .skill-mf .skill-tags li {
+        font-size: 0.8rem;
+        line-height: 1;
+        color: #fff;
+        padding: 0.45rem 0.7rem;
+        border: 1px solid rgba(255, 255, 255, 0.18);
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.06);
+        transition: border-color 0.2s, background 0.2s;
+      }
+
+      .skill-mf .skill-tags li:hover {
+        border-color: #ffbd39;
+        background: rgba(255, 189, 57, 0.12);
       }
 
       /* Animation styles */
@@ -254,40 +280,62 @@
 
                   <div class="skill-mf">
                     <p class="title-s">Skills</p>
-                    <span>Core Java</span>
-                    <!-- <span class="pull-right">85%</span> -->
-                    <div class="progress">
-                      <div class="progress-bar" role="progressbar" style="width: 95%" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+
+                    <div class="skill-group">
+                      <h4>Mobile &amp; Frontend</h4>
+                      <ul class="skill-tags">
+                        <li>React Native</li>
+                        <li>Expo</li>
+                        <li>React.js</li>
+                        <li>Redux</li>
+                        <li>Android</li>
+                        <li>Responsive UI</li>
+                      </ul>
                     </div>
 
-                    <span>JavaScript</span>
-                    <!-- <span class="pull-right">95%</span> -->
-                    <div class="progress">
-                      <div class="progress-bar" role="progressbar" style="width: 95%;" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+                    <div class="skill-group">
+                      <h4>Backend &amp; Databases</h4>
+                      <ul class="skill-tags">
+                        <li>Node.js</li>
+                        <li>Express.js</li>
+                        <li>REST APIs</li>
+                        <li>WebSockets</li>
+                        <li>MongoDB</li>
+                        <li>MySQL</li>
+                      </ul>
                     </div>
 
-                    <span>React Native</span>
-                    <!-- <span class="pull-right">85%</span> -->
-                    <div class="progress">
-                      <div class="progress-bar" role="progressbar" style="width: 95%" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+                    <div class="skill-group">
+                      <h4>IoT &amp; Connectivity</h4>
+                      <ul class="skill-tags">
+                        <li>BLE</li>
+                        <li>MQTT</li>
+                        <li>Device Provisioning</li>
+                        <li>Real-time Dashboards</li>
+                      </ul>
                     </div>
 
-                    <span>SQL, MongoDB</span>
-                    <!-- <span class="pull-right">99%</span> -->
-                    <div class="progress">
-                      <div class="progress-bar" role="progressbar" style="width: 95%" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+                    <div class="skill-group">
+                      <h4>Cloud &amp; DevOps</h4>
+                      <ul class="skill-tags">
+                        <li>Linux</li>
+                        <li>Linode</li>
+                        <li>Nginx</li>
+                        <li>PM2</li>
+                        <li>Git &amp; GitHub</li>
+                        <li>Postman</li>
+                      </ul>
                     </div>
 
-                    <span>React.js, Express.js</span>
-                    <!-- <span class="pull-right">99%</span> -->
-                    <div class="progress">
-                      <div class="progress-bar" role="progressbar" style="width: 95%" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-
-                    <span>DSA</span>
-                    <!-- <span class="pull-right">99%</span> -->
-                    <div class="progress">
-                      <div class="progress-bar" role="progressbar" style="width: 95%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                    <div class="skill-group">
+                      <h4>Languages</h4>
+                      <ul class="skill-tags">
+                        <li>JavaScript</li>
+                        <li>Python</li>
+                        <li>C / C++</li>
+                        <li>SQL</li>
+                        <li>HTML5 &amp; CSS3</li>
+                      </ul>
                     </div>
                   </div>
                 </div>
@@ -301,8 +349,7 @@
                   <h1 class="big">About</h1>
                   <h2 class="mb-4">About Me</h2>
 
-                  <p>Application Lead at SLIMiot Technologies with expertise in HTML, CSS, JavaScript, React.js, and backend development. Skilled in MySQL, Core Java, and React Native, with a strong foundation in DSA. Former Subject Matter Expert at Chegg.
-                    </p>
+                  <p>Application Lead at SlimIOT Technologies, building IoT healthcare and wearable apps with React Native, BLE, MQTT, Node.js, and MongoDB — from device communication to cloud dashboards.</p>
                   <ul class="about-info mt-4 px-md-0 px-2">
                     <li class="d-flex">
                       <span>Profile:</span>
@@ -349,7 +396,7 @@
           <div class="col-md-10 heading-section text-center ftco-animate">
             <h1 class="big big-2">Resume</h1>
             <h2 class="mb-4">Resume</h2>
-            <p>As a seasoned Front-end Developer, I wield a robust skill set encompassing HTML, CSS, JavaScript, and MySQL. My familiarity with Core Java, and foundational knowledge of data structures and algorithms (DSA) further enhance my capabilities. Notably, I’ve demonstrated expertise as a Subject Matter Expert at Chegg. With a passion for clean code and user-centric design, I thrive in creating seamless web experiences.</p>
+            <p>Full-stack and React Native engineer with 1+ years of experience building production IoT, healthcare, and wearable-device applications that integrate BLE, MQTT, and cloud infrastructure. Currently leading architecture for connected mobile platforms at a healthtech startup, owning systems from firmware-facing communication layers through to cloud-synced dashboards and public-facing product websites.</p>
           </div>
         </div>
 
@@ -360,37 +407,18 @@
         <br>
 
         <div class="row">
-          <div class="col-md-6">
+          <div class="col-md-12">
             <div class="resume-wrap ftco-animate">
-              <span class="date">Feb 25-May 25</span>
-              <h2>Web Developer Intern</h2>
-              <span class="position">Unified Mentor Pvt Ltd</span>
-              <p class="mt-4">At Unified Mentor, I firmly believe that practical knowledge is the key to success in the tech industry. Our internship program is designed to provide hands-on learning through live projects and real-world examples.
-                <ul>
-                  <li>Working in developement of applications based on MERN Stack.</li>
-                  <li>Experience of working in project.</li>
-                  <!-- <li>Designed and executed A/B tests, performed rigorous statistical analysis. Led to 20% MoM increase in the conversion rate.</li> -->
-                </ul>
-              </p>
+              <span class="date">Jul 2025 – Present</span>
+              <h2>Application Lead</h2>
+              <span class="position">SlimIOT Technologies Pvt Ltd</span>
+              <ul class="mt-4">
+                <li>Lead architecture and end-to-end development of IoT-based healthcare and wearable applications in React Native, owning technical direction across mobile, firmware, and backend integration.</li>
+                <li>Design and implement BLE communication protocols, MQTT data pipelines, and cloud-connected device management systems supporting real-time health monitoring.</li>
+                <li>Coordinate across firmware, hardware, backend, and mobile teams to ship scalable analytics solutions on a cross-functional product timeline.</li>
+                <li>Build real-time monitoring dashboards and data visualization modules used for live patient and device telemetry.</li>
+              </ul>
             </div>
-
-          </div>
-
-          <div class="col-md-6">
-            <div class="resume-wrap ftco-animate">
-              <span class="date">Mar 22-Jan 24</span>
-              <h2>Subject Matter Expert</h2>
-              <span class="position">Chegg</span>
-              <p class="mt-4">I have been a subject matter expert at Chegg India, contributing to the academic success of students in computer science-related courses. And help to develop our teaching skills.
-                <ul>
-                  <li>Offering valuable insights into programming languages.</li>
-                  <li>Help to boost our teaching skills.</li>
-
-
-                </ul>
-              </p>
-            </div>
-
           </div>
         </div>
 
@@ -428,7 +456,7 @@
         <div class="row justify-content-center mt-5">
           <div class="col-md-6 text-center ftco-animate">
             <p>
-              <a href="https://drive.google.com/uc?export=download&id=1sJxm4QG8HvmALT5nZQ7FjcvSZ_LND8D8" target="_blank" class="btn btn-primary py-4 px-5">Download CV</a>
+              <a href="https://drive.google.com/uc?export=download&id=1nH8I_-wqy53k5BRM455HeojbZRXrvhBb" target="_blank" class="btn btn-primary py-4 px-5">Download CV</a>
             </p>
           </div>
         </div>
@@ -452,7 +480,7 @@
             <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
               <div class="block-18">
                 <div class="text">
-                  <strong class="number" data-number="4">0</strong>
+                  <strong class="number" data-number="6">0</strong>
                   <span>Projects</span>
                 </div>
               </div>
@@ -531,7 +559,7 @@
               </div>
               <h3 class="mb-4">Download Resume</h3>
               <p>
-                <a href="https://drive.google.com/uc?export=download&id=1sJxm4QG8HvmALT5nZQ7FjcvSZ_LND8D8" target="_blank">resumelink</a>
+                <a href="https://drive.google.com/uc?export=download&id=1nH8I_-wqy53k5BRM455HeojbZRXrvhBb" target="_blank">Download PDF</a>
               </p>
             </div>
           </div>
