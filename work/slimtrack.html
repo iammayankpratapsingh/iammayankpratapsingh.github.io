@@ -3,18 +3,18 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>SlimTrack — GPS tracking platform | Mayank Pratap Singh</title>
+  <title>SlimTrack — Real-time GPS &amp; IoT tracking platform | Mayank Pratap Singh</title>
   <meta name="description" content="Case study: SlimTrack, a GPS tracking application on the nRF9161 DK cellular IoT module, with an MQTT communication layer, a Node.js and MongoDB backend, geofencing and trip history, deployed on Linode.">
   <link rel="canonical" href="https://iammayankpratapsingh.github.io/work/slimtrack.html">
   <meta name="theme-color" content="#fafaf8">
   <meta property="og:type" content="article">
   <meta property="og:site_name" content="Mayank Pratap Singh">
-  <meta property="og:title" content="SlimTrack — GPS tracking platform | Mayank Pratap Singh">
+  <meta property="og:title" content="SlimTrack — Real-time GPS &amp; IoT tracking platform | Mayank Pratap Singh">
   <meta property="og:description" content="Case study: SlimTrack, a GPS tracking application on the nRF9161 DK cellular IoT module, with an MQTT communication layer, a Node.js and MongoDB backend, geofencing and trip history, deployed on Linode.">
   <meta property="og:url" content="https://iammayankpratapsingh.github.io/work/slimtrack.html">
   <meta property="og:image" content="https://iammayankpratapsingh.github.io/assets/og.png">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="SlimTrack — GPS tracking platform | Mayank Pratap Singh">
+  <meta name="twitter:title" content="SlimTrack — Real-time GPS &amp; IoT tracking platform | Mayank Pratap Singh">
   <meta name="twitter:description" content="Case study: SlimTrack, a GPS tracking application on the nRF9161 DK cellular IoT module, with an MQTT communication layer, a Node.js and MongoDB backend, geofencing and trip history, deployed on Linode.">
   <meta name="twitter:image" content="https://iammayankpratapsingh.github.io/assets/og.png">
   <link rel="icon" href="../favicon.svg" type="image/svg+xml">
@@ -45,7 +45,6 @@
       <nav aria-label="Primary">
         <div class="nav-links" id="nav-links">
           <a href="../#work">Work</a>
-          <a href="../#stack">Stack</a>
           <a href="../#experience">Experience</a>
           <a href="../#about">About</a>
           <a href="../#contact">Contact</a>
@@ -69,7 +68,7 @@
     <section class="cs-hero">
       <div class="container">
         <a class="crumb" href="../#work"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M11 19l-7-7 7-7"/></svg> All work</a>
-        <p class="eyebrow reveal">Case study · GPS tracking platform</p>
+        <p class="eyebrow reveal">Case study · Real-time GPS & IoT tracking platform</p>
         <h1 class="reveal" style="--d:60ms; margin-top:18px">SlimTrack</h1>
         <p class="kicker reveal" style="--d:120ms">The tracking app and the Node.js and MongoDB backend for a cellular GPS tracker, built and deployed by me.</p>
         <dl class="cs-meta reveal" style="--d:180ms"><div><dt>Role</dt><dd>Application Lead</dd></div><div><dt>Company</dt><dd>SlimIOT Technologies</dd></div><div><dt>Device</dt><dd>nRF9161 DK</dd></div><div><dt>Hosting</dt><dd>Linode</dd></div></dl>
@@ -91,9 +90,9 @@
           </div>
         </section>
         <section class="cs-section reveal">
-          <h2><span>02</span>Problem</h2>
+          <h2><span>02</span>Challenge</h2>
           <div class="cs-content">
-            <p>A cellular tracker sends small, frequent location messages over links that aren’t always reliable. The system has to take them in continuously, store a location history that can be queried, and turn raw coordinates into the answers people care about: where is it now, did it leave the area, where did it go today.</p>
+            <p>A cellular tracker sends small, frequent location messages over links that aren’t always reliable. The system has to take them in continuously, store a location history that can be queried, and turn raw coordinates into the answers people care about: where is it now, did it leave the area, where did it go today.</p><h3 class="visually-hidden">Key challenges</h3><ul class="cs-list"><li><span>Ingesting a continuous stream of device messages over MQTT</span></li><li><span>Modelling location data in MongoDB so history, routes and trips are cheap to query</span></li><li><span>Owning deployment end to end: backend, database and broker running on Linode</span></li></ul>
           </div>
         </section>
         <section class="cs-section reveal">
@@ -103,7 +102,13 @@
           </div>
         </section>
         <section class="cs-section reveal">
-          <h2><span>04</span>Architecture</h2>
+          <h2><span>04</span>Solution</h2>
+          <div class="cs-content">
+            <p>The nRF9161 DK publishes over cellular MQTT to a Node.js backend that stores device and location data in MongoDB. The mobile app turns that into live tracking, geofences with entry/exit alerts, route history and trip summaries. The full stack runs on Linode.</p>
+          </div>
+        </section>
+        <section class="cs-section reveal">
+          <h2><span>05</span>Architecture</h2>
           <div class="cs-content">
             <div class="arch" role="img" aria-label="nRF9161 DK → Node.js → MongoDB → SlimTrack app">
 <div class="arch-node"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="6" width="12" height="12" rx="2"/><path d="M9 2v4M15 2v4M9 18v4M15 18v4M2 9h4M2 15h4M18 9h4M18 15h4"/></svg></span><span class="k">Device</span><h3>nRF9161 DK</h3><p>Cellular IoT module reporting location</p></div>
@@ -117,27 +122,21 @@
           </div>
         </section>
         <section class="cs-section reveal">
-          <h2><span>05</span>Key features</h2>
+          <h2><span>06</span>Key features</h2>
           <div class="cs-content">
             <div class="features"><div class="feature"><h3>Live location</h3><p>See where each device is in real time.</p></div><div class="feature"><h3>Geofencing</h3><p>Entry and exit alerts for defined areas.</p></div><div class="feature"><h3>Route history</h3><p>Replay where a device has been.</p></div><div class="feature"><h3>Trip summaries</h3><p>Distance, duration, points and time for each trip.</p></div><div class="feature"><h3>Home dashboard</h3><p>Device status, a live map preview and environmental sensor readings.</p></div><div class="feature"><h3>Environmental sensors</h3><p>Temperature, humidity, vibration and light readings in the app.</p></div></div>
           </div>
         </section>
         <section class="cs-section reveal">
-          <h2><span>06</span>Screens</h2>
-          <div class="cs-content">
-            <div class="screens screens-wide"><figure><div class="phone "><img src="../assets/img/slimtrack-screen-home.webp" width="720" height="1600" loading="lazy" alt="Home dashboard with device status, map and environmental sensors"></div><figcaption>Home</figcaption></figure><figure><div class="phone "><img src="../assets/img/slimtrack-screen-geofence.webp" width="720" height="1600" loading="lazy" alt="Live tracking with geofence radius and alert type"></div><figcaption>Live tracking & geofence</figcaption></figure><figure><div class="phone "><img src="../assets/img/slimtrack-screen-route.webp" width="720" height="1600" loading="lazy" alt="Route history for one trip with distance and duration"></div><figcaption>Route history</figcaption></figure></div>
-          </div>
-        </section>
-        <section class="cs-section reveal">
-          <h2><span>07</span>Challenges</h2>
-          <div class="cs-content">
-            <ul class="cs-list"><li><span>Ingesting a continuous stream of device messages over MQTT</span></li><li><span>Modelling location data in MongoDB so history, routes and trips are cheap to query</span></li><li><span>Owning deployment end to end: backend, database and broker running on Linode</span></li></ul>
-          </div>
-        </section>
-        <section class="cs-section reveal">
-          <h2><span>08</span>Technology</h2>
+          <h2><span>07</span>Technology</h2>
           <div class="cs-content">
             <div class="tags"><span class="tag">nRF9161 DK</span><span class="tag">MQTT</span><span class="tag">Node.js</span><span class="tag">MongoDB</span><span class="tag">Linode</span></div>
+          </div>
+        </section>
+        <section class="cs-section reveal">
+          <h2><span>08</span>Screenshots</h2>
+          <div class="cs-content">
+            <div class="screens screens-wide"><figure><div class="phone "><img src="../assets/img/slimtrack-screen-home.webp" width="720" height="1600" loading="lazy" alt="Home dashboard with device status, map and environmental sensors"></div><figcaption>Home</figcaption></figure><figure><div class="phone "><img src="../assets/img/slimtrack-screen-geofence.webp" width="720" height="1600" loading="lazy" alt="Live tracking with geofence radius and alert type"></div><figcaption>Live tracking & geofence</figcaption></figure><figure><div class="phone "><img src="../assets/img/slimtrack-screen-route.webp" width="720" height="1600" loading="lazy" alt="Route history for one trip with distance and duration"></div><figcaption>Route history</figcaption></figure></div>
           </div>
         </section>
         <section class="cs-section reveal">

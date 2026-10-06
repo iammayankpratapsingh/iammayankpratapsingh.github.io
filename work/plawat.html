@@ -3,18 +3,18 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Plawat Smart Band — Wearable health monitoring app | Mayank Pratap Singh</title>
+  <title>Plawat Smart Band — Connected smart band app | Mayank Pratap Singh</title>
   <meta name="description" content="Case study: Plawat Smart Band, a wearable health monitoring app with BLE pairing, device provisioning, multi-device cloud sync, custom health alerts and real-time analytics.">
   <link rel="canonical" href="https://iammayankpratapsingh.github.io/work/plawat.html">
   <meta name="theme-color" content="#fafaf8">
   <meta property="og:type" content="article">
   <meta property="og:site_name" content="Mayank Pratap Singh">
-  <meta property="og:title" content="Plawat Smart Band — Wearable health monitoring app | Mayank Pratap Singh">
+  <meta property="og:title" content="Plawat Smart Band — Connected smart band app | Mayank Pratap Singh">
   <meta property="og:description" content="Case study: Plawat Smart Band, a wearable health monitoring app with BLE pairing, device provisioning, multi-device cloud sync, custom health alerts and real-time analytics.">
   <meta property="og:url" content="https://iammayankpratapsingh.github.io/work/plawat.html">
   <meta property="og:image" content="https://iammayankpratapsingh.github.io/assets/og.png">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Plawat Smart Band — Wearable health monitoring app | Mayank Pratap Singh">
+  <meta name="twitter:title" content="Plawat Smart Band — Connected smart band app | Mayank Pratap Singh">
   <meta name="twitter:description" content="Case study: Plawat Smart Band, a wearable health monitoring app with BLE pairing, device provisioning, multi-device cloud sync, custom health alerts and real-time analytics.">
   <meta name="twitter:image" content="https://iammayankpratapsingh.github.io/assets/og.png">
   <link rel="icon" href="../favicon.svg" type="image/svg+xml">
@@ -45,7 +45,6 @@
       <nav aria-label="Primary">
         <div class="nav-links" id="nav-links">
           <a href="../#work">Work</a>
-          <a href="../#stack">Stack</a>
           <a href="../#experience">Experience</a>
           <a href="../#about">About</a>
           <a href="../#contact">Contact</a>
@@ -69,9 +68,9 @@
     <section class="cs-hero">
       <div class="container">
         <a class="crumb" href="../#work"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M11 19l-7-7 7-7"/></svg> All work</a>
-        <p class="eyebrow reveal">Case study · Wearable health monitoring app</p>
+        <p class="eyebrow reveal">Case study · Connected smart band app</p>
         <h1 class="reveal" style="--d:60ms; margin-top:18px">Plawat Smart Band</h1>
-        <p class="kicker reveal" style="--d:120ms">The companion app for a health band: pairing, provisioning, alerts and analytics across every band on an account.</p>
+        <p class="kicker reveal" style="--d:120ms">A mobile experience for a connected smart band: pairing, provisioning, alerts and analytics across every band on an account.</p>
         <dl class="cs-meta reveal" style="--d:180ms"><div><dt>Role</dt><dd>Application Lead</dd></div><div><dt>Company</dt><dd>SlimIOT Technologies</dd></div><div><dt>Platform</dt><dd>Mobile app · Cloud</dd></div><div><dt>Focus</dt><dd>BLE · Multi-device</dd></div></dl>
         <p class="note reveal" style="margin-top:20px">The device hardware and firmware are built by SlimIOT’s device teams. My work is the software: the mobile app, dashboards, alerts and cloud sync.</p>
       </div>
@@ -91,9 +90,9 @@
           </div>
         </section>
         <section class="cs-section reveal">
-          <h2><span>02</span>Problem</h2>
+          <h2><span>02</span>Challenge</h2>
           <div class="cs-content">
-            <p>A wearable app gets harder as soon as one account owns more than one device. Each band has to be paired and provisioned, its readings synced without mixing devices up, and everything rolled up into a single account-level view. Abnormal readings also need to reach the user quickly, not only when they open a dashboard.</p>
+            <p>A wearable app gets harder as soon as one account owns more than one device. Each band has to be paired and provisioned, its readings synced without mixing devices up, and everything rolled up into a single account-level view. Abnormal readings also need to reach the user quickly, not only when they open a dashboard.</p><h3 class="visually-hidden">Key challenges</h3><ul class="cs-list"><li><span>Keeping device identity and data separate while several bands sync to one account</span></li><li><span>Designing the data model so per-device readings aggregate cleanly at account level</span></li><li><span>Turning live readings into alerts without overwhelming the user</span></li></ul>
           </div>
         </section>
         <section class="cs-section reveal">
@@ -103,7 +102,13 @@
           </div>
         </section>
         <section class="cs-section reveal">
-          <h2><span>04</span>Architecture</h2>
+          <h2><span>04</span>Solution</h2>
+          <div class="cs-content">
+            <p>One app pairs and provisions each band over BLE, syncs every device’s readings to the cloud and aggregates them at account level. Real-time dashboards and custom alerts for abnormal readings sit on top.</p>
+          </div>
+        </section>
+        <section class="cs-section reveal">
+          <h2><span>05</span>Architecture</h2>
           <div class="cs-content">
             <div class="arch" role="img" aria-label="Plawat bands → Plawat app → Device data → Aggregation">
 <div class="arch-node"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="6" width="12" height="12" rx="3"/><path d="M9 6V2h6v4M9 18v4h6v-4"/></svg></span><span class="k">Device</span><h3>Plawat bands</h3><p>One or more bands per account</p></div>
@@ -117,27 +122,21 @@
           </div>
         </section>
         <section class="cs-section reveal">
-          <h2><span>05</span>Key features</h2>
+          <h2><span>06</span>Key features</h2>
           <div class="cs-content">
             <div class="features"><div class="feature"><h3>Pairing & provisioning</h3><p>Bring a new band online from the app over BLE.</p></div><div class="feature"><h3>Multi-device</h3><p>Several paired devices per account, each synced to the cloud.</p></div><div class="feature"><h3>Custom alerts</h3><p>Notify on abnormal health readings.</p></div><div class="feature"><h3>Real-time analytics</h3><p>Live health dashboards backed by account-level data.</p></div><div class="feature"><h3>Today dashboard</h3><p>Health tiles, live vitals (heart rate, SpO₂, breathing) and readiness cards in one view.</p></div><div class="feature"><h3>Live posture</h3><p>Real-time lean tracking, weekly posture average and what to correct.</p></div></div>
           </div>
         </section>
         <section class="cs-section reveal">
-          <h2><span>06</span>Screens</h2>
-          <div class="cs-content">
-            <div class="screens screens-wide"><figure><div class="phone "><img src="../assets/img/plawat-screen-today.webp" width="540" height="1200" loading="lazy" alt="Today dashboard with health tiles, live vitals and readiness cards"></div><figcaption>Today dashboard</figcaption></figure><figure><div class="phone "><img src="../assets/img/plawat-screen-posture.webp" width="540" height="1200" loading="lazy" alt="Live posture screen with lean indicator and weekly average"></div><figcaption>Live posture</figcaption></figure></div>
-          </div>
-        </section>
-        <section class="cs-section reveal">
-          <h2><span>07</span>Challenges</h2>
-          <div class="cs-content">
-            <ul class="cs-list"><li><span>Keeping device identity and data separate while several bands sync to one account</span></li><li><span>Designing the data model so per-device readings aggregate cleanly at account level</span></li><li><span>Turning live readings into alerts without overwhelming the user</span></li></ul>
-          </div>
-        </section>
-        <section class="cs-section reveal">
-          <h2><span>08</span>Technology</h2>
+          <h2><span>07</span>Technology</h2>
           <div class="cs-content">
             <div class="tags"><span class="tag">React Native</span><span class="tag">BLE</span><span class="tag">Device provisioning</span><span class="tag">Cloud sync</span><span class="tag">Real-time analytics</span></div>
+          </div>
+        </section>
+        <section class="cs-section reveal">
+          <h2><span>08</span>Screenshots</h2>
+          <div class="cs-content">
+            <div class="screens screens-wide"><figure><div class="phone "><img src="../assets/img/plawat-screen-today.webp" width="540" height="1200" loading="lazy" alt="Today dashboard with health tiles, live vitals and readiness cards"></div><figcaption>Today dashboard</figcaption></figure><figure><div class="phone "><img src="../assets/img/plawat-screen-posture.webp" width="540" height="1200" loading="lazy" alt="Live posture screen with lean indicator and weekly average"></div><figcaption>Live posture</figcaption></figure></div>
           </div>
         </section>
         <section class="cs-section reveal">

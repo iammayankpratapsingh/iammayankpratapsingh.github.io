@@ -3,18 +3,18 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Stethopod — Digital stethoscope application | Mayank Pratap Singh</title>
+  <title>Stethopod — Digital stethoscope mobile application | Mayank Pratap Singh</title>
   <meta name="description" content="Case study: Stethopod, a digital stethoscope application with real-time BLE audio streaming, recording and playback, patient profiles and secure cloud storage for medical audio.">
   <link rel="canonical" href="https://iammayankpratapsingh.github.io/work/stethopod.html">
   <meta name="theme-color" content="#fafaf8">
   <meta property="og:type" content="article">
   <meta property="og:site_name" content="Mayank Pratap Singh">
-  <meta property="og:title" content="Stethopod — Digital stethoscope application | Mayank Pratap Singh">
+  <meta property="og:title" content="Stethopod — Digital stethoscope mobile application | Mayank Pratap Singh">
   <meta property="og:description" content="Case study: Stethopod, a digital stethoscope application with real-time BLE audio streaming, recording and playback, patient profiles and secure cloud storage for medical audio.">
   <meta property="og:url" content="https://iammayankpratapsingh.github.io/work/stethopod.html">
   <meta property="og:image" content="https://iammayankpratapsingh.github.io/assets/og.png">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Stethopod — Digital stethoscope application | Mayank Pratap Singh">
+  <meta name="twitter:title" content="Stethopod — Digital stethoscope mobile application | Mayank Pratap Singh">
   <meta name="twitter:description" content="Case study: Stethopod, a digital stethoscope application with real-time BLE audio streaming, recording and playback, patient profiles and secure cloud storage for medical audio.">
   <meta name="twitter:image" content="https://iammayankpratapsingh.github.io/assets/og.png">
   <link rel="icon" href="../favicon.svg" type="image/svg+xml">
@@ -45,7 +45,6 @@
       <nav aria-label="Primary">
         <div class="nav-links" id="nav-links">
           <a href="../#work">Work</a>
-          <a href="../#stack">Stack</a>
           <a href="../#experience">Experience</a>
           <a href="../#about">About</a>
           <a href="../#contact">Contact</a>
@@ -69,7 +68,7 @@
     <section class="cs-hero">
       <div class="container">
         <a class="crumb" href="../#work"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M11 19l-7-7 7-7"/></svg> All work</a>
-        <p class="eyebrow reveal">Case study · Digital stethoscope application</p>
+        <p class="eyebrow reveal">Case study · Digital stethoscope mobile application</p>
         <h1 class="reveal" style="--d:60ms; margin-top:18px">Stethopod</h1>
         <p class="kicker reveal" style="--d:120ms">A digital stethoscope app that streams audio over BLE in real time, records it, and stores it securely against patient profiles.</p>
         <dl class="cs-meta reveal" style="--d:180ms"><div><dt>Role</dt><dd>Application Lead</dd></div><div><dt>Company</dt><dd>SlimIOT Technologies</dd></div><div><dt>Platform</dt><dd>Mobile app · Cloud</dd></div><div><dt>Focus</dt><dd>BLE audio</dd></div></dl>
@@ -91,9 +90,9 @@
           </div>
         </section>
         <section class="cs-section reveal">
-          <h2><span>02</span>Problem</h2>
+          <h2><span>02</span>Challenge</h2>
           <div class="cs-content">
-            <p>Audio is one of the hardest things to send over BLE. It’s continuous, latency is noticeable, and a dropped connection in the middle of an examination interrupts the clinician. The recordings are also medical data, so they have to be organised per patient and stored securely.</p>
+            <p>Audio is one of the hardest things to send over BLE. It’s continuous, latency is noticeable, and a dropped connection in the middle of an examination interrupts the clinician. The recordings are also medical data, so they have to be organised per patient and stored securely.</p><h3 class="visually-hidden">Key challenges</h3><ul class="cs-list"><li><span>Keeping audio latency low enough for live listening</span></li><li><span>Recovering from BLE drops quickly so an examination isn’t interrupted</span></li><li><span>Handling medical audio securely from capture through cloud storage</span></li></ul>
           </div>
         </section>
         <section class="cs-section reveal">
@@ -103,7 +102,13 @@
           </div>
         </section>
         <section class="cs-section reveal">
-          <h2><span>04</span>Architecture</h2>
+          <h2><span>04</span>Solution</h2>
+          <div class="cs-content">
+            <p>The app streams audio from the stethoscope over BLE in real time, recovers quickly when the link drops, and manages recording and playback. Recordings are attached to patient profiles and stored securely in the cloud.</p>
+          </div>
+        </section>
+        <section class="cs-section reveal">
+          <h2><span>05</span>Architecture</h2>
           <div class="cs-content">
             <div class="arch" role="img" aria-label="Stethopod → Stethopod app → Patient profiles → Secure storage">
 <div class="arch-node"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="6" width="12" height="12" rx="2"/><path d="M9 2v4M15 2v4M9 18v4M15 18v4M2 9h4M2 15h4M18 9h4M18 15h4"/></svg></span><span class="k">Device</span><h3>Stethopod</h3><p>Connected digital stethoscope</p></div>
@@ -117,15 +122,9 @@
           </div>
         </section>
         <section class="cs-section reveal">
-          <h2><span>05</span>Key features</h2>
+          <h2><span>06</span>Key features</h2>
           <div class="cs-content">
             <div class="features"><div class="feature"><h3>Live audio</h3><p>Real-time streaming from the stethoscope over BLE.</p></div><div class="feature"><h3>Record & replay</h3><p>Capture examinations and play them back.</p></div><div class="feature"><h3>Patient history</h3><p>Profiles with every recording attached.</p></div><div class="feature"><h3>Fast reconnection</h3><p>Low-latency recovery when the BLE link drops.</p></div></div>
-          </div>
-        </section>
-        <section class="cs-section reveal">
-          <h2><span>06</span>Challenges</h2>
-          <div class="cs-content">
-            <ul class="cs-list"><li><span>Keeping audio latency low enough for live listening</span></li><li><span>Recovering from BLE drops quickly so an examination isn’t interrupted</span></li><li><span>Handling medical audio securely from capture through cloud storage</span></li></ul>
           </div>
         </section>
         <section class="cs-section reveal">

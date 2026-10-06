@@ -3,18 +3,18 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Dozemate — Sleep health monitoring platform | Mayank Pratap Singh</title>
+  <title>Dozemate — IoT sleep monitoring platform | Mayank Pratap Singh</title>
   <meta name="description" content="Case study: Dozemate, a sleep-health monitoring platform. Real-time BLE device-to-app sync, sleep-stage and wellness-trend dashboards, and cloud-synced historical analytics.">
   <link rel="canonical" href="https://iammayankpratapsingh.github.io/work/dozemate.html">
   <meta name="theme-color" content="#fafaf8">
   <meta property="og:type" content="article">
   <meta property="og:site_name" content="Mayank Pratap Singh">
-  <meta property="og:title" content="Dozemate — Sleep health monitoring platform | Mayank Pratap Singh">
+  <meta property="og:title" content="Dozemate — IoT sleep monitoring platform | Mayank Pratap Singh">
   <meta property="og:description" content="Case study: Dozemate, a sleep-health monitoring platform. Real-time BLE device-to-app sync, sleep-stage and wellness-trend dashboards, and cloud-synced historical analytics.">
   <meta property="og:url" content="https://iammayankpratapsingh.github.io/work/dozemate.html">
   <meta property="og:image" content="https://iammayankpratapsingh.github.io/assets/og.png">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Dozemate — Sleep health monitoring platform | Mayank Pratap Singh">
+  <meta name="twitter:title" content="Dozemate — IoT sleep monitoring platform | Mayank Pratap Singh">
   <meta name="twitter:description" content="Case study: Dozemate, a sleep-health monitoring platform. Real-time BLE device-to-app sync, sleep-stage and wellness-trend dashboards, and cloud-synced historical analytics.">
   <meta name="twitter:image" content="https://iammayankpratapsingh.github.io/assets/og.png">
   <link rel="icon" href="../favicon.svg" type="image/svg+xml">
@@ -45,7 +45,6 @@
       <nav aria-label="Primary">
         <div class="nav-links" id="nav-links">
           <a href="../#work">Work</a>
-          <a href="../#stack">Stack</a>
           <a href="../#experience">Experience</a>
           <a href="../#about">About</a>
           <a href="../#contact">Contact</a>
@@ -69,7 +68,7 @@
     <section class="cs-hero">
       <div class="container">
         <a class="crumb" href="../#work"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M11 19l-7-7 7-7"/></svg> All work</a>
-        <p class="eyebrow reveal">Case study · Sleep health monitoring platform</p>
+        <p class="eyebrow reveal">Case study · IoT sleep monitoring platform</p>
         <h1 class="reveal" style="--d:60ms; margin-top:18px">Dozemate</h1>
         <p class="kicker reveal" style="--d:120ms">The mobile app and dashboards that turn overnight sensor data into sleep stages, wellness trends and long-term history.</p>
         <dl class="cs-meta reveal" style="--d:180ms"><div><dt>Role</dt><dd>Application Lead</dd></div><div><dt>Company</dt><dd>SlimIOT Technologies</dd></div><div><dt>Platform</dt><dd>Mobile app · Cloud · Web</dd></div><div><dt>Live</dt><dd><a class="link-arrow" href="https://dozemate.com" target="_blank" rel="noopener">dozemate.com <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a></dd></div></dl>
@@ -91,9 +90,9 @@
           </div>
         </section>
         <section class="cs-section reveal">
-          <h2><span>02</span>Problem</h2>
+          <h2><span>02</span>Challenge</h2>
           <div class="cs-content">
-            <p>Overnight health data is only useful if it’s complete. A dropped connection or a failed sync leaves a gap in the night, and a sleep report with gaps is one people stop trusting. The app had to receive readings reliably from the device, keep them in step with the cloud, and present a dense night of data clearly on a phone.</p>
+            <p>Overnight health data is only useful if it’s complete. A dropped connection or a failed sync leaves a gap in the night, and a sleep report with gaps is one people stop trusting. The app had to receive readings reliably from the device, keep them in step with the cloud, and present a dense night of data clearly on a phone.</p><h3 class="visually-hidden">Key challenges</h3><ul class="cs-list"><li><span>Keeping device-to-app sync reliable across a full night of readings</span></li><li><span>Presenting dense overnight signals legibly on a small screen</span></li><li><span>Keeping cloud history consistent with what the app shows, so long-term trends stay trustworthy</span></li></ul>
           </div>
         </section>
         <section class="cs-section reveal">
@@ -103,7 +102,13 @@
           </div>
         </section>
         <section class="cs-section reveal">
-          <h2><span>04</span>Architecture</h2>
+          <h2><span>04</span>Solution</h2>
+          <div class="cs-content">
+            <p>A React Native app finds the device over BLE, receives readings in real time and syncs them to the cloud. Interactive sleep-stage and wellness-trend dashboards and long-term history sit on top of that data.</p>
+          </div>
+        </section>
+        <section class="cs-section reveal">
+          <h2><span>05</span>Architecture</h2>
           <div class="cs-content">
             <div class="arch" role="img" aria-label="Dozemate sensor → Dozemate app → Backend → Analytics">
 <div class="arch-node"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="6" width="12" height="12" rx="2"/><path d="M9 2v4M15 2v4M9 18v4M15 18v4M2 9h4M2 15h4M18 9h4M18 15h4"/></svg></span><span class="k">Device</span><h3>Dozemate sensor</h3><p>Heart rate, HRV, respiration, movement, stress</p></div>
@@ -117,27 +122,21 @@
           </div>
         </section>
         <section class="cs-section reveal">
-          <h2><span>05</span>Key features</h2>
+          <h2><span>06</span>Key features</h2>
           <div class="cs-content">
             <div class="features"><div class="feature"><h3>Device setup</h3><p>Scan for nearby devices, connect and finish setup from the app.</p></div><div class="feature"><h3>Night summary</h3><p>Sleep score, total sleep, time in bed and incidents for the night.</p></div><div class="feature"><h3>Sleep hypnogram</h3><p>Awake, REM, light and deep stages across the night.</p></div><div class="feature"><h3>Trends & health</h3><p>Night-over-night comparisons plus heart rate, HRV and stress tiles.</p></div></div>
           </div>
         </section>
         <section class="cs-section reveal">
-          <h2><span>06</span>Screens</h2>
-          <div class="cs-content">
-            <div class="screens screens-wide"><figure><div class="phone "><img src="../assets/img/dozemate-screen-scan.webp" width="360" height="715" loading="lazy" alt="Scan for devices screen"></div><figcaption>Scan for devices</figcaption></figure><figure><div class="phone "><img src="../assets/img/dozemate-screen-wifi.webp" width="360" height="715" loading="lazy" alt="Network setup screen listing available networks"></div><figcaption>Network setup</figcaption></figure><figure><div class="phone "><img src="../assets/img/dozemate-screen-health.webp" width="360" height="715" loading="lazy" alt="My Health screen with heart rate, HRV and stress"></div><figcaption>My Health</figcaption></figure><figure><div class="phone auto"><img src="../assets/img/dozemate-screen-summary.webp" width="900" height="1350" loading="lazy" alt="Last-night summary with sleep score, timeline and incidents"></div><figcaption>Last-night summary</figcaption></figure><figure><div class="phone "><img src="../assets/img/dozemate-screen-night.webp" width="630" height="1400" loading="lazy" alt="Night detail with hypnogram"></div><figcaption>Night detail</figcaption></figure><figure><div class="phone "><img src="../assets/img/dozemate-screen-trends.webp" width="630" height="1400" loading="lazy" alt="Restlessness trends"></div><figcaption>Trends</figcaption></figure></div>
-          </div>
-        </section>
-        <section class="cs-section reveal">
-          <h2><span>07</span>Challenges</h2>
-          <div class="cs-content">
-            <ul class="cs-list"><li><span>Keeping device-to-app sync reliable across a full night of readings</span></li><li><span>Presenting dense overnight signals legibly on a small screen</span></li><li><span>Keeping cloud history consistent with what the app shows, so long-term trends stay trustworthy</span></li></ul>
-          </div>
-        </section>
-        <section class="cs-section reveal">
-          <h2><span>08</span>Technology</h2>
+          <h2><span>07</span>Technology</h2>
           <div class="cs-content">
             <div class="tags"><span class="tag">React Native</span><span class="tag">BLE</span><span class="tag">Cloud sync</span><span class="tag">Data visualization</span><span class="tag">Responsive web</span></div>
+          </div>
+        </section>
+        <section class="cs-section reveal">
+          <h2><span>08</span>Screenshots</h2>
+          <div class="cs-content">
+            <div class="screens screens-wide"><figure><div class="phone "><img src="../assets/img/dozemate-screen-scan.webp" width="360" height="715" loading="lazy" alt="Scan for devices screen"></div><figcaption>Scan for devices</figcaption></figure><figure><div class="phone "><img src="../assets/img/dozemate-screen-wifi.webp" width="360" height="715" loading="lazy" alt="Network setup screen listing available networks"></div><figcaption>Network setup</figcaption></figure><figure><div class="phone "><img src="../assets/img/dozemate-screen-health.webp" width="360" height="715" loading="lazy" alt="My Health screen with heart rate, HRV and stress"></div><figcaption>My Health</figcaption></figure><figure><div class="phone auto"><img src="../assets/img/dozemate-screen-summary.webp" width="900" height="1350" loading="lazy" alt="Last-night summary with sleep score, timeline and incidents"></div><figcaption>Last-night summary</figcaption></figure><figure><div class="phone "><img src="../assets/img/dozemate-screen-night.webp" width="630" height="1400" loading="lazy" alt="Night detail with hypnogram"></div><figcaption>Night detail</figcaption></figure><figure><div class="phone "><img src="../assets/img/dozemate-screen-trends.webp" width="630" height="1400" loading="lazy" alt="Restlessness trends"></div><figcaption>Trends</figcaption></figure></div>
           </div>
         </section>
         <section class="cs-section reveal">
