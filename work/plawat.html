@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Plawat Smart Band — Wearable health monitoring app | Mayank Pratap Singh</title>
+  <meta name="description" content="Case study: Plawat Smart Band, a wearable health monitoring app with BLE pairing, device provisioning, multi-device cloud sync, custom health alerts and real-time analytics.">
+  <link rel="canonical" href="https://iammayankpratapsingh.github.io/work/plawat.html">
+  <meta name="theme-color" content="#fafaf8">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Mayank Pratap Singh">
+  <meta property="og:title" content="Plawat Smart Band — Wearable health monitoring app | Mayank Pratap Singh">
+  <meta property="og:description" content="Case study: Plawat Smart Band, a wearable health monitoring app with BLE pairing, device provisioning, multi-device cloud sync, custom health alerts and real-time analytics.">
+  <meta property="og:url" content="https://iammayankpratapsingh.github.io/work/plawat.html">
+  <meta property="og:image" content="https://iammayankpratapsingh.github.io/assets/og.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Plawat Smart Band — Wearable health monitoring app | Mayank Pratap Singh">
+  <meta name="twitter:description" content="Case study: Plawat Smart Band, a wearable health monitoring app with BLE pairing, device provisioning, multi-device cloud sync, custom health alerts and real-time analytics.">
+  <meta name="twitter:image" content="https://iammayankpratapsingh.github.io/assets/og.png">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="../favicon-32x32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="../apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&display=swap">
+  <link rel="stylesheet" href="../assets/css/site.css">
+  <script>
+    (function () {
+      var t;
+      try { t = localStorage.getItem("theme"); } catch (e) {}
+      if (t !== "light" && t !== "dark") t = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+      document.documentElement.setAttribute("data-theme", t);
+      document.documentElement.classList.add("js");
+    })();
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="nav">
+    <div class="container nav-inner">
+      <a class="brand" href="../" aria-label="Mayank Pratap Singh — home">
+        <span class="brand-mark" aria-hidden="true">M</span>
+        <span>MAYANK</span>
+      </a>
+      <nav aria-label="Primary">
+        <div class="nav-links" id="nav-links">
+          <a href="../#work">Work</a>
+          <a href="../#stack">Stack</a>
+          <a href="../#experience">Experience</a>
+          <a href="../#about">About</a>
+          <a href="../#contact">Contact</a>
+          <a class="btn btn-primary nav-mobile-only" href="../#contact">Let’s work together</a>
+        </div>
+      </nav>
+      <div class="nav-actions">
+        <button class="icon-btn theme-toggle" type="button" aria-label="Switch theme">
+          <svg class="i-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+          <svg class="i-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+        </button>
+        <a class="btn btn-primary btn-sm nav-cta" href="../#contact">Let’s work together</a>
+        <button class="icon-btn menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">
+          <span class="bars" aria-hidden="true"><span></span><span></span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="cs-hero">
+      <div class="container">
+        <a class="crumb" href="../#work"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M11 19l-7-7 7-7"/></svg> All work</a>
+        <p class="eyebrow reveal">Case study · Wearable health monitoring app</p>
+        <h1 class="reveal" style="--d:60ms; margin-top:18px">Plawat Smart Band</h1>
+        <p class="kicker reveal" style="--d:120ms">The companion app for a health band: pairing, provisioning, alerts and analytics across every band on an account.</p>
+        <dl class="cs-meta reveal" style="--d:180ms"><div><dt>Role</dt><dd>Application Lead</dd></div><div><dt>Company</dt><dd>SlimIOT Technologies</dd></div><div><dt>Platform</dt><dd>Mobile app · Cloud</dd></div><div><dt>Focus</dt><dd>BLE · Multi-device</dd></div></dl>
+        <p class="note reveal" style="margin-top:20px">The device hardware and firmware are built by SlimIOT’s device teams. My work is the software: the mobile app, dashboards, alerts and cloud sync.</p>
+      </div>
+    </section>
+
+    <div class="container">
+      <div class="cs-visual reveal">
+        <div class="phone "><img src="../assets/img/plawat-screen-today.webp" width="540" height="1200" alt="Plawat app: Today dashboard with health tiles and live vitals"></div><div class="phone "><img src="../assets/img/plawat-screen-posture.webp" width="540" height="1200" alt="Plawat app: live posture screen"></div>
+      </div>
+    </div>
+
+    <div class="container cs-body">
+        <section class="cs-section reveal">
+          <h2><span>01</span>Overview</h2>
+          <div class="cs-content">
+            <p class="big">Plawat is a wearable health band. The app pairs and provisions the band, keeps its data in sync with the cloud and flags readings that need attention, for one device or several on the same account.</p>
+          </div>
+        </section>
+        <section class="cs-section reveal">
+          <h2><span>02</span>Problem</h2>
+          <div class="cs-content">
+            <p>A wearable app gets harder as soon as one account owns more than one device. Each band has to be paired and provisioned, its readings synced without mixing devices up, and everything rolled up into a single account-level view. Abnormal readings also need to reach the user quickly, not only when they open a dashboard.</p>
+          </div>
+        </section>
+        <section class="cs-section reveal">
+          <h2><span>03</span>My role</h2>
+          <div class="cs-content">
+            <ul class="cs-list"><li><span>Implemented <strong>BLE pairing, device provisioning and cloud sync</strong> across multiple paired devices</span></li><li><span>Implemented <strong>custom alerts</strong> for abnormal health readings</span></li><li><span>Built <strong>real-time health analytics dashboards</strong></span></li><li><span>Designed a <strong>scalable multi-device architecture</strong> with account-level data aggregation</span></li></ul>
+          </div>
+        </section>
+        <section class="cs-section reveal">
+          <h2><span>04</span>Architecture</h2>
+          <div class="cs-content">
+            <div class="arch" role="img" aria-label="Plawat bands → Plawat app → Device data → Aggregation">
+<div class="arch-node"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="6" width="12" height="12" rx="3"/><path d="M9 6V2h6v4M9 18v4h6v-4"/></svg></span><span class="k">Device</span><h3>Plawat bands</h3><p>One or more bands per account</p></div>
+<div class="arch-link" aria-hidden="true"><i></i><span>BLE</span></div>
+<div class="arch-node"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="2" width="12" height="20" rx="3"/><path d="M11 18h2"/></svg></span><span class="k">Mobile</span><h3>Plawat app</h3><p>Pairing, provisioning, alerts, dashboards</p></div>
+<div class="arch-link" aria-hidden="true"><i></i><span>sync</span></div>
+<div class="arch-node"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17.5 19H8a5 5 0 1 1 1.1-9.9A6 6 0 0 1 20.5 12 3.5 3.5 0 0 1 17.5 19z"/></svg></span><span class="k">Cloud</span><h3>Device data</h3><p>Readings stored per device</p></div>
+<div class="arch-link" aria-hidden="true"><i></i><span></span></div>
+<div class="arch-node"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0M16 4.5a3.5 3.5 0 0 1 0 7M18 14.5a6.5 6.5 0 0 1 3.5 5.5"/></svg></span><span class="k">Account</span><h3>Aggregation</h3><p>One account-level view across devices</p></div>
+</div><p class="note">High-level data flow. Simplified for clarity.</p>
+          </div>
+        </section>
+        <section class="cs-section reveal">
+          <h2><span>05</span>Key features</h2>
+          <div class="cs-content">
+            <div class="features"><div class="feature"><h3>Pairing & provisioning</h3><p>Bring a new band online from the app over BLE.</p></div><div class="feature"><h3>Multi-device</h3><p>Several paired devices per account, each synced to the cloud.</p></div><div class="feature"><h3>Custom alerts</h3><p>Notify on abnormal health readings.</p></div><div class="feature"><h3>Real-time analytics</h3><p>Live health dashboards backed by account-level data.</p></div><div class="feature"><h3>Today dashboard</h3><p>Health tiles, live vitals (heart rate, SpO₂, breathing) and readiness cards in one view.</p></div><div class="feature"><h3>Live posture</h3><p>Real-time lean tracking, weekly posture average and what to correct.</p></div></div>
+          </div>
+        </section>
+        <section class="cs-section reveal">
+          <h2><span>06</span>Screens</h2>
+          <div class="cs-content">
+            <div class="screens screens-wide"><figure><div class="phone "><img src="../assets/img/plawat-screen-today.webp" width="540" height="1200" loading="lazy" alt="Today dashboard with health tiles, live vitals and readiness cards"></div><figcaption>Today dashboard</figcaption></figure><figure><div class="phone "><img src="../assets/img/plawat-screen-posture.webp" width="540" height="1200" loading="lazy" alt="Live posture screen with lean indicator and weekly average"></div><figcaption>Live posture</figcaption></figure></div>
+          </div>
+        </section>
+        <section class="cs-section reveal">
+          <h2><span>07</span>Challenges</h2>
+          <div class="cs-content">
+            <ul class="cs-list"><li><span>Keeping device identity and data separate while several bands sync to one account</span></li><li><span>Designing the data model so per-device readings aggregate cleanly at account level</span></li><li><span>Turning live readings into alerts without overwhelming the user</span></li></ul>
+          </div>
+        </section>
+        <section class="cs-section reveal">
+          <h2><span>08</span>Technology</h2>
+          <div class="cs-content">
+            <div class="tags"><span class="tag">React Native</span><span class="tag">BLE</span><span class="tag">Device provisioning</span><span class="tag">Cloud sync</span><span class="tag">Real-time analytics</span></div>
+          </div>
+        </section>
+        <section class="cs-section reveal">
+          <h2><span>09</span>Outcome</h2>
+          <div class="cs-content">
+            <p>A multi-device wearable app whose architecture scales from one band to many on the same account, with alerts and analytics built in from the start.</p>
+          </div>
+        </section>
+
+      <a class="cs-next reveal" href="slimtrack.html">
+        <span><small>Next project</small><strong>SlimTrack</strong></span>
+        <span class="go" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ><path d="M5 12h14M13 5l7 7-7 7"/></svg></span>
+      </a>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© <span data-year>2026</span> Mayank Pratap Singh</p>
+      <nav aria-label="Footer">
+        <a href="https://github.com/iammayankpratapsingh" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.linkedin.com/in/iammayankpratapsingh/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="mailto:mayankpratapsingh137@gmail.com">Email</a>
+        <a href="../assets/Mayank_Pratap_Singh_Resume.pdf" download>Résumé</a>
+      </nav>
+    </div>
+  </footer>
+  <script src="../assets/js/site.js" defer></script>
+</body>
+</html>

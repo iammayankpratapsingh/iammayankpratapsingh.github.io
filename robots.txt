@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://iammayankpratapsingh.github.io/sitemap.xml

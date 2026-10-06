@@ -1,702 +1,546 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mayank Pratap Singh — Mobile App &amp; Dashboard Developer | React Native · React · Node.js</title>
+  <meta name="description" content="Full-stack and React Native engineer building mobile apps, real-time dashboards and Node.js backends for connected healthcare and wearable products. Application Lead at SlimIOT Technologies.">
+  <meta name="author" content="Mayank Pratap Singh">
+  <link rel="canonical" href="https://iammayankpratapsingh.github.io/">
+  <meta name="theme-color" content="#fafaf8">
 
-  <head>
-    <title>Mayank Pratap Singh</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Mayank Pratap Singh">
+  <meta property="og:title" content="Mayank Pratap Singh — Mobile apps & dashboards">
+  <meta property="og:description" content="React Native apps, real-time dashboards and Node.js backends for connected healthcare and wearable products.">
+  <meta property="og:url" content="https://iammayankpratapsingh.github.io/">
+  <meta property="og:image" content="https://iammayankpratapsingh.github.io/assets/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Mayank Pratap Singh — Mobile apps & dashboards">
+  <meta name="twitter:description" content="React Native apps, real-time dashboards and Node.js backends for connected healthcare and wearable products.">
+  <meta name="twitter:image" content="https://iammayankpratapsingh.github.io/assets/og.png">
 
-    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="favicon-32x32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
 
-    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
-    <link rel="stylesheet" href="css/animate.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&display=swap">
+  <link rel="stylesheet" href="assets/css/site.css">
+  <link rel="preload" as="image" href="assets/img/site-slimiot.webp" type="image/webp">
 
-    <link rel="stylesheet" href="css/owl.carousel.min.css">
-    <link rel="stylesheet" href="css/owl.theme.default.min.css">
-    <link rel="stylesheet" href="css/magnific-popup.css">
+  <script>
+    (function () {
+      var t;
+      try { t = localStorage.getItem("theme"); } catch (e) {}
+      if (t !== "light" && t !== "dark") t = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+      document.documentElement.setAttribute("data-theme", t);
+      document.documentElement.classList.add("js");
+    })();
+  </script>
 
-    <link rel="stylesheet" href="css/aos.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Mayank Pratap Singh",
+    "url": "https://iammayankpratapsingh.github.io/",
+    "jobTitle": "Application Lead",
+    "worksFor": { "@type": "Organization", "name": "SlimIOT Technologies Pvt Ltd", "url": "https://slimiot.com" },
+    "email": "mailto:mayankpratapsingh137@gmail.com",
+    "alumniOf": [
+      { "@type": "CollegeOrUniversity", "name": "NIET Greater Noida" },
+      { "@type": "CollegeOrUniversity", "name": "Gurukula Kangri Vishwavidyalaya" }
+    ],
+    "knowsAbout": ["React Native", "React", "Node.js", "MongoDB", "MQTT", "Bluetooth Low Energy", "WebSockets", "IoT"],
+    "sameAs": ["https://github.com/iammayankpratapsingh", "https://www.linkedin.com/in/iammayankpratapsingh/"]
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
 
-    <link rel="stylesheet" href="css/ionicons.min.css">
-
-    <link rel="stylesheet" href="css/flaticon.css">
-    <link rel="stylesheet" href="css/icomoon.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-    <style>
-      /*======================================
-//--//-->   ABOUT
-======================================*/
-
-      .about-mf .box-shadow-full {
-        padding-top: 4rem;
-        padding-bottom: 4rem;
-      }
-
-      .about-mf .about-img {
-        margin-bottom: 2rem;
-      }
-
-      .about-mf .about-img img {
-        margin-left: 10px;
-      }
-
-      .skill-mf .skill-group {
-        margin-bottom: 1.1rem;
-      }
-
-      .skill-mf .skill-group h4 {
-        font-size: 0.72rem;
-        font-weight: 600;
-        letter-spacing: 0.08em;
-        text-transform: uppercase;
-        color: #ffbd39;
-        margin: 0 0 0.5rem;
-      }
-
-      .skill-mf .skill-tags {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 0.4rem;
-        list-style: none;
-        margin: 0;
-        padding: 0;
-      }
-
-      .skill-mf .skill-tags li {
-        font-size: 0.8rem;
-        line-height: 1;
-        color: #fff;
-        padding: 0.45rem 0.7rem;
-        border: 1px solid rgba(255, 255, 255, 0.18);
-        border-radius: 999px;
-        background: rgba(255, 255, 255, 0.06);
-        transition: border-color 0.2s, background 0.2s;
-      }
-
-      .skill-mf .skill-tags li:hover {
-        border-color: #ffbd39;
-        background: rgba(255, 189, 57, 0.12);
-      }
-
-      /* Animation styles */
-      #typing-animation {
-        position: relative;
-        font-size: 30px;
-        font-weight: bold;
-        color: rgb(255, 255, 255);
-        overflow: hidden;
-        white-space: nowrap;
-        animation: typing 3s steps(20, end) infinite;
-      }
-
-      #typing-animation:before {
-        content: "";
-        /* position: absolute; */
-        top: 0;
-        left: 0;
-        width: 0;
-        height: 100%;
-        background-color: #ccc;
-        animation: typing-cursor 0.5s ease-in-out infinite;
-      }
-
-      @keyframes typing {
-        from {
-          width: 0;
-        }
-
-        to {
-          width: 100%;
-        }
-      }
-
-      @keyframes typing-cursor {
-        from {
-          width: 5px;
-        }
-
-        to {
-          width: 0;
-        }
-      }
-
-      /* project image zoom effect */
-
-      .zoom-effect {
-        overflow: hidden;
-        transition: transform 0.3s ease-out;
-      }
-
-      .zoom-effect:hover {
-        transform: scale(1.1);
-      }
-
-      @media screen and (orientation: portrait) {
-        body {
-          margin-left: 5%;
-          margin-right: 5%;
-        }
-
-        .order-md-last {
-          visibility: hidden;
-        }
-
-        .about-img img {
-          content: url("images/me.png");
-        }
-      }
-    </style>
-
-  </head>
-
-  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
-
-    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
-      <div class="container">
-        <a class="navbar-brand" href="index.html">Mayank Pratap Singh</a>
-        <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="oi oi-menu"></span>
-          Menu
+  <!-- ================= Navigation ================= -->
+  <header class="nav">
+    <div class="container nav-inner">
+      <a class="brand" href="#top" aria-label="Mayank Pratap Singh — home">
+        <span class="brand-mark" aria-hidden="true">M</span>
+        <span>MAYANK</span>
+      </a>
+      <nav aria-label="Primary">
+        <div class="nav-links" id="nav-links">
+          <a href="#work">Work</a>
+          <a href="#stack">Stack</a>
+          <a href="#experience">Experience</a>
+          <a href="#about">About</a>
+          <a href="#contact">Contact</a>
+          <a class="btn btn-primary nav-mobile-only" href="#contact">Let’s work together</a>
+        </div>
+      </nav>
+      <div class="nav-actions">
+        <button class="icon-btn theme-toggle" type="button" aria-label="Switch theme">
+          <svg class="i-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+          <svg class="i-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
         </button>
-
-        <div class="collapse navbar-collapse" id="ftco-nav">
-          <ul class="navbar-nav nav ml-auto">
-            <li class="nav-item">
-              <a href="#home-section" class="nav-link">
-                <span>Home</span></a>
-            </li>
-            <li class="nav-item">
-              <a href="#about-section" class="nav-link">
-                <span>About</span></a>
-            </li>
-            <li class="nav-item">
-              <a href="#resume-section" class="nav-link">
-                <span>Resume</span></a>
-            </li>
-            <li class="nav-item">
-              <a href="#contact-section" class="nav-link">
-                <span>Contact</span></a>
-            </li>
-            <li class="nav-item">
-              <a href="#send-message" class="nav-link">
-                <span>Message me</span></a>
-            </li>
-          </ul>
-        </div>
+        <a class="btn btn-primary btn-sm nav-cta" href="#contact">Let’s work together</a>
+        <button class="icon-btn menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">
+          <span class="bars" aria-hidden="true"><span></span><span></span></span>
+        </button>
       </div>
-    </nav>
-    <section id="home-section" class="hero">
-      <div class="home-slider  owl-carousel">
-        <div class="slider-item ">
-          <div class="overlay"></div>
-          <div class="container">
-            <div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end" data-scrollax-parent="true">
-              <div class="one-third js-fullheight order-md-last img" style="background-image:url(images/me.png);">
-                <div class="overlay"></div>
-              </div>
-              <div class="one-forth d-flex  align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
-                <div class="text">
-                  <span class="subheading">Hello!</span>
-                  <h1 class="mb-4 mt-3">I'm
-                    <span>Mayank Pratap Singh</span></h1>
+    </div>
+  </header>
 
-                  <!-- Element to contain animated typing -->
-                  <span id="typing-animation"></span>
-
-                  <script>
-                    // Initialize the typing animation
-                    const typingAnimationElement = document.getElementById('typing-animation');
-
-                    // Create an array of typing text
-                    const typingTexts = ['Application Lead     ', 'Software Developer     ', 'NIETians    '];
-
-                    // Create a function to display the typing animation for a given text
-                    function playTypingAnimation(text) {
-                      // Loop through each character and add it to the element
-                      for (let i = 0; i < text.length; i++) {
-                        setTimeout(() => {
-                          typingAnimationElement.textContent += text[i];
-                        }, i * 100); // Decreased delay to speed up the typing animation
-                      }
-
-                      // Once the animation is complete, reset the text and start over
-                      setTimeout(() => {
-                        typingAnimationElement.textContent = '';
-                        playTypingAnimation(typingTexts[(typingTexts.indexOf(text) + 1) % typingTexts.length]);
-                      }, text.length * 100); // Adjusted delay accordingly
-                    }
-
-                    // Start the typing animation loop
-                    playTypingAnimation(typingTexts[0]);
-                  </script><br><br>
-                  <!-- <h2 class="d-flex" style="margin-bottom: 0">With over 5 years of experience</h2> -->
-                  <!-- <br> -->
-                  <p>
-                    <a href="https://www.instagram.com/iammayankpratapsingh/" target="_blank" class="btn btn-primary py-3 px-4">My Instagram</a>
-                    <a href="https://www.linkedin.com/in/iammayankpratapsingh/" target="_blank" class="btn btn-white btn-outline-white py-3 px-4">My Linkedin</a>
-                  </p>
-                </div>
-              </div>
-            </div>
+  <main id="main">
+    <!-- ================= Hero ================= -->
+    <section class="hero" id="top">
+      <div class="container hero-grid">
+        <div>
+          <p class="hero-status reveal">
+            <span class="pulse" aria-hidden="true"></span>
+            <span><strong>Application Lead</strong> at SlimIOT Technologies</span>
+          </p>
+          <h1 class="reveal" style="--d:80ms">I build mobile apps &amp; dashboards <span class="soft">for connected health products.</span></h1>
+          <p class="hero-lede reveal" style="--d:160ms">
+            Full-stack and React Native engineer. I build the <strong>mobile apps</strong>, <strong>real-time dashboards</strong> and <strong>Node.js backends</strong> for connected healthcare and wearable products, from pairing a device in the app to cloud-synced analytics.
+          </p>
+          <div class="hero-ctas reveal" style="--d:240ms">
+            <a class="btn btn-primary" href="#work">View my work
+              <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+            </a>
+            <a class="btn" href="#contact">Let’s work together</a>
+            <a class="btn btn-ghost" href="assets/Mayank_Pratap_Singh_Resume.pdf" download>
+              <svg class="arrow-down" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12m0 0-5-5m5 5 5-5M5 21h14"/></svg>
+              Résumé
+            </a>
           </div>
+          <div class="hero-meta reveal" style="--d:320ms">
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Based in India</span>
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>Open to full-time roles &amp; freelance work</span>
+          </div>
+        </div>
+
+        <!-- Real product assets: slimiot.com, the Dozemate app and the Stethopod device -->
+        <div class="collage reveal" style="--d:200ms" aria-label="Software I've built: the SlimIOT website and screens from the Dozemate mobile app" role="img">
+          <div class="browser">
+            <div class="browser-bar"><span class="dots"><i></i><i></i><i></i></span><span class="url">slimiot.com</span><span class="spacer"></span></div>
+            <img src="assets/img/site-slimiot.webp" width="1600" height="1000" alt="">
+          </div>
+          <div class="phone">
+            <img src="assets/img/dozemate-screen-night.webp" width="630" height="1400" alt="">
+          </div>
+          <div class="phone back">
+            <img src="assets/img/dozemate-screen-health.webp" width="360" height="715" alt="">
+          </div>
+          <span class="label l1"><i></i>Live dashboards</span>
+          <span class="label l2"><i></i>React Native</span>
+          <span class="label l3"><i></i>Node.js · MongoDB</span>
         </div>
       </div>
     </section>
 
-    <section class="ftco-about img ftco-section ftco-no-pb" id="about-section">
+    <!-- ================= Stack strip ================= -->
+    <section class="stack-strip" aria-label="Core technologies">
       <div class="container">
-        <div class="row">
-          <div class="row d-flex align-items-stretch">
-            <!-- <div class="row d-flex"> -->
-            <div class="col-md-6 col-lg-5 d-flex">
-              <div class="img-about img d-flex align-items-stretch">
-                <div class="overlay">
-                  <div class="row">
-                    <div class="col-sm-6 col-md-5">
-                      <div class="about-img">
-                        <img src="images/profile-pic.png" class="img-fluid rounded b-shadow-a" alt="">
-                      </div>
-                    </div>
-                    <!-- Details next to profile image -->
-                    <div class="col-sm-6 col-md-7">
-                      <div class="about-info">
-                        <p>
-                          <span class="title-s">Name:
-                          </span>
-                          <span>Mayank Pratap Singh</span></p>
-                        <p>
-                          <span class="title-s">Job Role:
-                          </span>
-                          <span>Application Lead</span></p>
-                        <p>
-                          <!-- <span class="title-s">Experience: </span> <span>5 Years 3 Months</span></p> <p> -->
-                          <span class="title-s">Address:
-                          </span>
-                          <span>Greater Noida, Uttar Pradesh</span></p>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="skill-mf">
-                    <p class="title-s">Skills</p>
-
-                    <div class="skill-group">
-                      <h4>Mobile &amp; Frontend</h4>
-                      <ul class="skill-tags">
-                        <li>React Native</li>
-                        <li>Expo</li>
-                        <li>React.js</li>
-                        <li>Redux</li>
-                        <li>Android</li>
-                        <li>Responsive UI</li>
-                      </ul>
-                    </div>
-
-                    <div class="skill-group">
-                      <h4>Backend &amp; Databases</h4>
-                      <ul class="skill-tags">
-                        <li>Node.js</li>
-                        <li>Express.js</li>
-                        <li>REST APIs</li>
-                        <li>WebSockets</li>
-                        <li>MongoDB</li>
-                        <li>MySQL</li>
-                      </ul>
-                    </div>
-
-                    <div class="skill-group">
-                      <h4>IoT &amp; Connectivity</h4>
-                      <ul class="skill-tags">
-                        <li>BLE</li>
-                        <li>MQTT</li>
-                        <li>Device Provisioning</li>
-                        <li>Real-time Dashboards</li>
-                      </ul>
-                    </div>
-
-                    <div class="skill-group">
-                      <h4>Cloud &amp; DevOps</h4>
-                      <ul class="skill-tags">
-                        <li>Linux</li>
-                        <li>Linode</li>
-                        <li>Nginx</li>
-                        <li>PM2</li>
-                        <li>Git &amp; GitHub</li>
-                        <li>Postman</li>
-                      </ul>
-                    </div>
-
-                    <div class="skill-group">
-                      <h4>Languages</h4>
-                      <ul class="skill-tags">
-                        <li>JavaScript</li>
-                        <li>Python</li>
-                        <li>C / C++</li>
-                        <li>SQL</li>
-                        <li>HTML5 &amp; CSS3</li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-md-6 col-lg-7 pl-lg-5 pb-5">
-              <div class="row justify-content-start pb-3">
-                <div class="col-md-12 heading-section ftco-animate">
-
-                  <h1 class="big">About</h1>
-                  <h2 class="mb-4">About Me</h2>
-
-                  <p>Application Lead at SlimIOT Technologies, building IoT healthcare and wearable apps with React Native, BLE, MQTT, Node.js, and MongoDB — from device communication to cloud dashboards.</p>
-                  <ul class="about-info mt-4 px-md-0 px-2">
-                    <li class="d-flex">
-                      <span>Profile:</span>
-                      <span>Application Lead</span></li>
-                    <li class="d-flex">
-                      <span>Domain:</span>
-                      <span>Software Developement</span></li>
-                    <li class="d-flex">
-                      <span>Education:</span>
-                      <span>Master of Computer Applications</span></li>
-                    <li class="d-flex">
-                      <span>Language:</span>
-                      <span>English, Hindi</span></li>
-                    <!-- <li class="d-flex"> <span>BI Tools:</span> <span>Microsoft Power BI, Looker &amp; Tableau</span></li> -->
-                    <li class="d-flex">
-                      <span>Other Skills:</span>
-                      <span>
-                        Drawing proficiency, Observational skills, Creativity, Technical proficiency, Communication skills, Time management, Adaptability &amp; Attention to detail</span></li>
-                    <li class="d-flex">
-                      <span>Interest:</span>
-                      <span>Traveling, Cooking</span></li>
-
-                  </ul>
-                </div>
-              </div>
-
-              <div class="counter-wrap ftco-animate d-flex mt-md-3">
-                <div class="text">
-                  <!-- <p class="mb-4"> <span class="number" data-number="30">0</span> <span>+</span> <span>&nbsp; Projects completed</span> </p> -->
-                  <p>
-                    <a href="https://www.linkedin.com/in/iammayankpratapsingh/" target="_blank" class="btn btn-primary py-3 px-3">LinkedIn</a>
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+        <p class="lead">The stack I ship production apps with</p>
+        <ul>
+          <li>React Native</li>
+          <li>React</li>
+          <li>TypeScript</li>
+          <li>Node.js</li>
+          <li>MongoDB</li>
+          <li>BLE</li>
+          <li>MQTT</li>
+          <li>WebSockets</li>
+          <li>Linux / Nginx</li>
+        </ul>
       </div>
     </section>
 
-    <section class="ftco-section ftco-no-pb" id="resume-section">
+    <!-- ================= Selected work ================= -->
+    <section class="section" id="work" data-spy>
       <div class="container">
-        <div class="row justify-content-center pb-5">
-          <div class="col-md-10 heading-section text-center ftco-animate">
-            <h1 class="big big-2">Resume</h1>
-            <h2 class="mb-4">Resume</h2>
-            <p>Full-stack and React Native engineer with 1+ years of experience building production IoT, healthcare, and wearable-device applications that integrate BLE, MQTT, and cloud infrastructure. Currently leading architecture for connected mobile platforms at a healthtech startup, owning systems from firmware-facing communication layers through to cloud-synced dashboards and public-facing product websites.</p>
-          </div>
+        <div class="section-head reveal">
+          <span class="eyebrow">Selected work</span>
+          <h2>Apps and dashboards for real, shipping products.</h2>
+          <p>Mobile apps, dashboards and backends I’ve built at SlimIOT Technologies for the company’s healthcare, wearable and tracking devices.</p>
         </div>
 
-        <div class="row">
-          <h1 class="big-4">Experience</h1>
-          <div class="underline"></div>
-        </div>
-        <br>
+        <div class="work-list">
+          <!-- Dozemate — featured -->
+          <article class="project featured reveal">
+            <div class="project-visual">
+              <div class="featured-media media">
+                <div class="phone side"><img src="assets/img/dozemate-screen-health.webp" width="360" height="715" loading="lazy" alt="Dozemate app: My Health screen with heart rate, HRV and stress tiles"></div>
+                <div class="phone mid"><img src="assets/img/dozemate-screen-night.webp" width="630" height="1400" loading="lazy" alt="Dozemate app: night detail with sleep score and hypnogram"></div>
+                <div class="phone side"><img src="assets/img/dozemate-screen-trends.webp" width="630" height="1400" loading="lazy" alt="Dozemate app: restlessness trends across nights"></div>
+              </div>
+            </div>
+            <div class="project-body">
+              <div class="featured-intro">
+                <p class="project-index"><span>01 — Featured</span><span class="kind">Sleep health platform</span></p>
+                <h3><a href="work/dozemate.html">Dozemate</a></h3>
+                <p class="subtitle">The app and dashboards that turn a night of sensor data into a sleep report.</p>
+                <div class="tags"><span class="tag">React Native</span><span class="tag">BLE</span><span class="tag">Cloud sync</span><span class="tag">Data visualization</span></div>
+                <div class="project-foot">
+                  <a class="link-arrow" href="work/dozemate.html">Read the case study
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+                  </a>
+                </div>
+              </div>
+              <div class="breakdown">
+                <div><h4>The challenge</h4><p>Heart rate, HRV, respiration, movement and stress readings have to travel from a BLE device to the phone and on to the cloud, intact, every night.</p></div>
+                <div><h4>My contribution</h4><p>Built the real-time device-to-app sync pipeline, the sleep-stage and wellness-trend dashboards, and cloud-synced historical analytics.</p></div>
+                <div><h4>Implementation</h4><p>A mobile app that discovers and syncs with the device over BLE, then pushes readings to a cloud backend that keeps long-term history.</p></div>
+                <div><h4>Outcome</h4><p>A production sleep-health product with its own app and marketing site at dozemate.com, which I also built.</p></div>
+              </div>
+            </div>
+          </article>
 
-        <div class="row">
-          <div class="col-md-12">
-            <div class="resume-wrap ftco-animate">
-              <span class="date">Jul 2025 – Present</span>
-              <h2>Application Lead</h2>
-              <span class="position">SlimIOT Technologies Pvt Ltd</span>
-              <ul class="mt-4">
-                <li>Lead architecture and end-to-end development of IoT-based healthcare and wearable applications in React Native, owning technical direction across mobile, firmware, and backend integration.</li>
-                <li>Design and implement BLE communication protocols, MQTT data pipelines, and cloud-connected device management systems supporting real-time health monitoring.</li>
-                <li>Coordinate across firmware, hardware, backend, and mobile teams to ship scalable analytics solutions on a cross-functional product timeline.</li>
-                <li>Build real-time monitoring dashboards and data visualization modules used for live patient and device telemetry.</li>
+          <!-- Plawat -->
+          <article class="project reveal">
+            <div class="project-visual">
+              <div class="media media-pair">
+                <div class="phone"><img src="assets/img/plawat-screen-today.webp" width="540" height="1200" loading="lazy" alt="Plawat app: Today dashboard with health tiles and live vitals"></div>
+                <div class="phone"><img src="assets/img/plawat-screen-posture.webp" width="540" height="1200" loading="lazy" alt="Plawat app: live posture screen"></div>
+              </div>
+              <div class="mini-flow" aria-hidden="true"><span>Band</span><em>→ BLE →</em><span>App</span><em>→</em><span>Cloud</span></div>
+            </div>
+            <div class="project-body">
+              <p class="project-index"><span>02</span><span class="kind">Wearable health app</span></p>
+              <h3><a href="work/plawat.html">Plawat Smart Band</a></h3>
+              <p class="desc">The companion app for SlimIOT’s health-monitoring wristband, built to handle many bands per account.</p>
+              <ul class="contrib">
+                <li>BLE pairing, device provisioning and cloud sync across multiple paired devices</li>
+                <li>Custom alerts for abnormal health readings</li>
+                <li>Multi-device architecture with account-level data aggregation</li>
               </ul>
+              <div class="project-foot">
+                <div class="tags"><span class="tag">React Native</span><span class="tag">BLE</span><span class="tag">Provisioning</span><span class="tag">Real-time analytics</span></div>
+                <a class="link-arrow" href="work/plawat.html">Read the case study
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+                </a>
+              </div>
             </div>
-          </div>
+          </article>
+
+          <!-- SlimTrack -->
+          <article class="project flip reveal">
+            <div class="project-visual">
+              <div class="media media-pair trio">
+                <div class="phone"><img src="assets/img/slimtrack-screen-home.webp" width="720" height="1600" loading="lazy" alt="SlimTrack app: home dashboard with live map and environmental sensors"></div>
+                <div class="phone"><img src="assets/img/slimtrack-screen-geofence.webp" width="720" height="1600" loading="lazy" alt="SlimTrack app: live tracking with geofence setup"></div>
+                <div class="phone"><img src="assets/img/slimtrack-screen-route.webp" width="720" height="1600" loading="lazy" alt="SlimTrack app: route history with trip summary"></div>
+              </div>
+              <div class="mini-flow" aria-hidden="true"><span>nRF9161</span><em>→ MQTT →</em><span>Node.js</span><em>→</em><span>MongoDB</span></div>
+            </div>
+            <div class="project-body">
+              <p class="project-index"><span>03</span><span class="kind">GPS tracking platform</span></p>
+              <h3><a href="work/slimtrack.html">SlimTrack</a></h3>
+              <p class="desc">The tracking app and backend for SlimIOT’s cellular GPS tracker, built and deployed by me.</p>
+              <ul class="contrib">
+                <li>MQTT communication layer for the nRF9161 DK cellular module</li>
+                <li>Node.js and MongoDB backend for device and location data</li>
+                <li>Live tracking, geofencing with entry/exit alerts, route history and trip summaries in the mobile app</li>
+              </ul>
+              <div class="project-foot">
+                <div class="tags"><span class="tag">MQTT</span><span class="tag">Node.js</span><span class="tag">MongoDB</span><span class="tag">nRF9161 DK</span><span class="tag">Linode</span></div>
+                <a class="link-arrow" href="work/slimtrack.html">Read the case study
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Stethopod -->
+          <article class="project reveal">
+            <div class="project-visual">
+              <img class="media media-device" src="assets/img/stethopod-device.webp" width="317" height="374" loading="lazy" alt="The Stethopod digital stethoscope">
+              <div class="mini-flow" aria-hidden="true"><span>Stethoscope</span><em>→ BLE audio →</em><span>App</span><em>→</em><span>Cloud</span></div>
+            </div>
+            <div class="project-body">
+              <p class="project-index"><span>04</span><span class="kind">Digital stethoscope app</span></p>
+              <h3><a href="work/stethopod.html">Stethopod</a></h3>
+              <p class="desc">The app that streams heart and lung sounds from SlimIOT’s digital stethoscope to the phone in real time.</p>
+              <ul class="contrib">
+                <li>Real-time audio streaming over BLE with low-latency reconnection handling</li>
+                <li>Recording and playback management</li>
+                <li>Patient profiles, history and secure cloud storage for medical audio</li>
+              </ul>
+              <div class="project-foot">
+                <div class="tags"><span class="tag">React Native</span><span class="tag">BLE audio</span><span class="tag">Cloud storage</span></div>
+                <a class="link-arrow" href="work/stethopod.html">Read the case study
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+                </a>
+              </div>
+            </div>
+          </article>
         </div>
 
-        <br>
-        <br>
-
-        <div class="row">
-          <h1 class="big-4">Education</h1>
-          <div class="underline"></div>
+        <!-- Websites -->
+        <div class="subhead reveal">
+          <h3>Product websites</h3>
+          <p>Designed and built end to end. Both are live.</p>
         </div>
-        <br>
-
-
-       
-        <div class="row">
-          <div class="col-md-6">
-            <div class="resume-wrap ftco-animate">
-              <span class="date">2023-2025</span>
-              <h2>Master of Computer Applications</h2>
-              <span class="position">NIET, Greater Noida</span>
-              <p class="mt-4">CGPA: 8.7</p>
+        <div class="sites">
+          <article class="site-card reveal">
+            <div class="browser">
+              <div class="browser-bar"><span class="dots"><i></i><i></i><i></i></span><span class="url">slimiot.com</span><span class="spacer"></span></div>
+              <img src="assets/img/site-slimiot.webp" width="1600" height="1000" loading="lazy" alt="Homepage of slimiot.com">
             </div>
-          </div>
-           <div class="col-md-6">
-            <div class="resume-wrap ftco-animate">
-              <span class="date">2020-2023</span>
-              <h2>Bachelor of Science</h2>
-              <span class="position">Gurukula Kangri University, Haridwar</span>
-              <p class="mt-4">CGPA: 9.01</p>
+            <div class="meta">
+              <h3><a href="https://slimiot.com" target="_blank" rel="noopener">SlimIOT Technologies</a>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
+              </h3>
+              <p>Company website presenting the product suite, company profile and healthcare solutions.</p>
             </div>
-          </div>
-        </div>
-
-
-        <div class="row justify-content-center mt-5">
-          <div class="col-md-6 text-center ftco-animate">
-            <p>
-              <a href="https://drive.google.com/uc?export=download&id=1nH8I_-wqy53k5BRM455HeojbZRXrvhBb" target="_blank" class="btn btn-primary py-4 px-5">Download CV</a>
-            </p>
-          </div>
+          </article>
+          <article class="site-card reveal" style="--d:100ms">
+            <div class="browser">
+              <div class="browser-bar"><span class="dots"><i></i><i></i><i></i></span><span class="url">dozemate.com</span><span class="spacer"></span></div>
+              <img src="assets/img/site-dozemate.webp" width="1600" height="1000" loading="lazy" alt="Homepage of dozemate.com">
+            </div>
+            <div class="meta">
+              <h3><a href="https://dozemate.com" target="_blank" rel="noopener">Dozemate</a>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
+              </h3>
+              <p>Marketing site for the sleep monitor: a responsive, conversion-focused presentation of the product.</p>
+            </div>
+          </article>
         </div>
       </div>
     </section>
 
-    <!-- <section class="ftco-section" id="project-section"> <div class="container"> <div class="row justify-content-center mb-5 pb-5"> <div class="col-md-7 heading-section text-center ftco-animate"> <h1 class="big big-2">Projects</h1> <h2 class="mb-4">Projects</h2> <p>Below are the sample Data Analytics projects on SQL, Python, Power BI & ML.</p> </div> </div> <div class="row d-flex"> <div class="col-md-4 d-flex ftco-animate"> <div class="blog-entry justify-content-end"> <a href="https://github.com/rishabhnmishra/SQL_Music_Store_Analysis/blob/main/Music_Store_Query.sql" class="block-20 zoom-effect" style="background-image: url('images/proj_1.jpg');"></a> <div class="text mt-3 float-right d-block"> <h3 class="heading"> <a href="https://github.com/rishabhnmishra/SQL_Music_Store_Analysis/blob/main/Music_Store_Query.sql">Digital Music Store Data Analysis using SQL</a> </h3> <p>Analyzed music store data using advanced SQL queires to identify gaps and increase the business growth.</p> </div> </div> </div> <div class="col-md-4 d-flex ftco-animate"> <div class="blog-entry justify-content-end"> <a href="https://github.com/rishabhnmishra/Python_Diwali_Sales_Analysis/blob/main/Diwali_Sales_Analysis.ipynb" class="block-20 zoom-effect" style="background-image: url('images/proj_2.jpg');"></a> <div class="text mt-3 float-right d-block"> <h3 class="heading"> <a href="https://github.com/rishabhnmishra/Python_Diwali_Sales_Analysis/blob/main/Diwali_Sales_Analysis.ipynb">Data Analysis using Python Project for Beginners</a> </h3> <p>Performed exploratory data analysis on diwali sales data using Python to improve the customer experience.</p> </div> </div> </div> <div class="col-md-4 d-flex ftco-animate"> <div class="blog-entry"> <a href="https://github.com/rishabhnmishra/Madhav_Store_Analysis_PowerBI/blob/main/Madhav%20Store%20dashboard.jpg" class="block-20 zoom-effect" style="background-image: url('images/proj_3.jpg');"></a> <div class="text mt-3 float-right d-block"> <h3 class="heading"> <a href="https://github.com/rishabhnmishra/Madhav_Store_Analysis_PowerBI/blob/main/Madhav%20Store%20dashboard.jpg">Power BI Sales dashboard Project for Beginners</a> </h3> <p>Designed a power bi dashboard for Madhav Store to track and analyze the online sales data acorss India.</p> </div> </div> </div> </div> <br> <div class="row d-flex justify-content-center"> <div class="col-md-4 d-flex ftco-animate"> <div class="blog-entry justify-content-end"> <a href="https://github.com/rishabhnmishra/sales_forecasting/tree/main" class="block-20 zoom-effect" style="background-image: url('images/proj_4.jpg');"></a> <div class="text mt-3 float-right d-block"> <h3 class="heading"> <a href="https://github.com/rishabhnmishra/sales_forecasting/tree/main">Sales Forecast- Time Series Forecasting</a> </h3> <p>Used multiple machine learning models to forecast sales (retail store) and performed time series analysis.</p> </div> </div> </div> <div class="col-md-4 d-flex ftco-animate"> <div class="blog-entry justify-content-end"> <a href="https://github.com/rishabhnmishra/customer_segmentation/blob/main/Customer_Segmentation-final.ipynb" class="block-20 zoom-effect" style="background-image: url('images/proj_5.jpg');"></a> <div class="text mt-3 float-right d-block"> <h3 class="heading"> <a href="https://github.com/rishabhnmishra/customer_segmentation/blob/main/Customer_Segmentation-final.ipynb">Customer Segmentation using clustering model</a> </h3> <p>Developed a ML model to give various recommendations of financial products &amp; services on target customer groups.</p> </div> </div> </div> </div> </div> </section> -->
-
-    <section class="ftco-section ftco-no-pt ftco-no-pb ftco-counter img" id="section-counter">
-      <div class="hid" style="visibility:hidden">
-        <div class="container">
-          <div class="row d-md-flex align-items-center">
-            <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
-              <div class="block-18">
-                <div class="text">
-                  <strong class="number" data-number="28">0</strong>
-                  <span>Certificates</span>
-                </div>
-              </div>
-            </div>
-            <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
-              <div class="block-18">
-                <div class="text">
-                  <strong class="number" data-number="6">0</strong>
-                  <span>Projects</span>
-                </div>
-              </div>
-            </div>
-            <!-- <div class="col-md d-flex justify-content-center counter-wrap ftco-animate"> <div class="block-18"> <div class="text"> <strong class="number" data-number="1000">0</strong> <span>Mentored Students</span> </div> </div> </div> <div class="col-md d-flex justify-content-center counter-wrap ftco-animate"> <div class="block-18"> <div class="text"> <strong class="number" data-number="500">0</strong> <span>Cups of coffee</span> </div> </div> </div> -->
-          </div>
+    <!-- ================= Stack / layers ================= -->
+    <section class="section" id="stack" data-spy>
+      <div class="container layers-wrap">
+        <div class="section-head reveal">
+          <span class="eyebrow">Where I work</span>
+          <h2>The software side of connected products.</h2>
+          <p>SlimIOT’s hardware and firmware teams build the devices. I build everything people actually use: the mobile apps, the dashboards and the backend behind them, plus the app-side connection to each device.</p>
         </div>
-      </div>
-
-      <div class="ftco-section ftco-hireme img margin-top" style="background-image: url(images/bg_1.jpg)">
-        <!-- <div class="container"> -->
-        <div class="row justify-content-center">
-          <div class="col-md-7 ftco-animate text-center">
-            <h2>Here's my<span>
-                <button id="gitbtn" class="btn btn-primary py-3 px-5" onclick="gitClick()">GitHub</button>
-              </span>
-            </h2>
-            <div class="heading">
-              <h4>
-                I love to code &amp; create awesome artworks.
-              </h4>
-              <br>
-            </div>
-          </div>
-        </div>
-        <!-- </div> -->
+        <ol class="layers">
+          <li class="layer reveal" style="--d:60ms">
+            <span class="layer-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4.9 19.1a10 10 0 0 1 0-14.2M19.1 4.9a10 10 0 0 1 0 14.2M7.8 16.2a6 6 0 0 1 0-8.4M16.2 7.8a6 6 0 0 1 0 8.4"/><circle cx="12" cy="12" r="1.5"/></svg></span>
+            <div><h3>Device connectivity</h3><p>App-side pairing, provisioning, streaming and reconnection</p></div>
+            <div class="tags"><span class="tag">BLE</span><span class="tag">MQTT</span><span class="tag">WebSockets</span></div>
+          </li>
+          <li class="layer reveal" style="--d:120ms">
+            <span class="layer-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="2" width="12" height="20" rx="3"/><path d="M11 18h2"/></svg></span>
+            <div><h3>Mobile apps</h3><p>Cross-platform apps for live and historical health data</p></div>
+            <div class="tags"><span class="tag">React Native</span><span class="tag">Expo</span><span class="tag">Redux</span></div>
+          </li>
+          <li class="layer reveal" style="--d:180ms">
+            <span class="layer-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="7" rx="2"/><rect x="3" y="13" width="18" height="7" rx="2"/><path d="M7 7.5h.01M7 16.5h.01"/></svg></span>
+            <div><h3>Backend &amp; APIs</h3><p>Device management, ingestion and the APIs apps talk to</p></div>
+            <div class="tags"><span class="tag">Node.js</span><span class="tag">Express</span><span class="tag">REST</span></div>
+          </li>
+          <li class="layer reveal" style="--d:240ms">
+            <span class="layer-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v14c0 1.7 3.6 3 8 3s8-1.3 8-3V5M4 12c0 1.7 3.6 3 8 3s8-1.3 8-3"/></svg></span>
+            <div><h3>Data</h3><p>Device, location and health history, modelled for queries</p></div>
+            <div class="tags"><span class="tag">MongoDB</span><span class="tag">MySQL</span></div>
+          </li>
+          <li class="layer reveal" style="--d:300ms">
+            <span class="layer-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="m7 15 4-4 3 3 5-6"/></svg></span>
+            <div><h3>Dashboards &amp; web</h3><p>Real-time telemetry dashboards and product websites</p></div>
+            <div class="tags"><span class="tag">React</span><span class="tag">Data viz</span></div>
+          </li>
+          <li class="layer reveal" style="--d:360ms">
+            <span class="layer-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="m7 9 3 3-3 3M13 15h4"/></svg></span>
+            <div><h3>Infrastructure</h3><p>Deploying and running the stack on Linux servers</p></div>
+            <div class="tags"><span class="tag">Linode</span><span class="tag">Nginx</span><span class="tag">PM2</span></div>
+          </li>
+        </ol>
       </div>
     </section>
 
-    <section class="ftco-section contact-section ftco-no-pb" id="contact-section">
+    <!-- ================= Services ================= -->
+    <section class="section" id="services">
       <div class="container">
-        <div class="row justify-content-center mb-5 pb-3">
-          <div class="col-md-7 heading-section text-center ftco-animate">
-            <h1 class="big big-2">Contact</h1>
-            <h2 class="mb-4">Contact Me</h2>
-            <p>Below are the details to reach out to me!</p>
+        <div class="section-head reveal">
+          <span class="eyebrow">What I can build</span>
+          <h2>For founders and teams shipping something real.</h2>
+          <p>Bring me in for a full product or a single layer of it.</p>
+        </div>
+        <div class="services reveal">
+          <div class="service">
+            <span class="num">01</span>
+            <h3>Mobile applications</h3>
+            <p>Cross-platform React Native and Expo apps with clean state, offline-aware data and polished UI.</p>
+            <div class="tags"><span class="tag">React Native</span><span class="tag">Expo</span><span class="tag">Android</span></div>
+          </div>
+          <div class="service">
+            <span class="num">02</span>
+            <h3>Web apps &amp; dashboards</h3>
+            <p>React interfaces, real-time dashboards and responsive product or marketing websites.</p>
+            <div class="tags"><span class="tag">React</span><span class="tag">Redux</span><span class="tag">TypeScript</span></div>
+          </div>
+          <div class="service">
+            <span class="num">03</span>
+            <h3>Backend systems</h3>
+            <p>Node.js APIs, databases, WebSocket services and deployment on Linux servers.</p>
+            <div class="tags"><span class="tag">Node.js</span><span class="tag">MongoDB</span><span class="tag">Nginx</span></div>
+          </div>
+          <div class="service">
+            <span class="num">04</span>
+            <h3>Apps for connected devices</h3>
+            <p>Apps that pair with and stream from BLE devices, MQTT data pipelines and live telemetry dashboards.</p>
+            <div class="tags"><span class="tag">BLE</span><span class="tag">MQTT</span><span class="tag">Telemetry</span></div>
           </div>
         </div>
-
-        <div class="row d-flex contact-info mb-5">
-          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
-            <div class="align-self-stretch box p-4 text-center">
-              <div class="icon d-flex align-items-center justify-content-center">
-                <span class="icon-map-signs"></span>
-              </div>
-              <h3 class="mb-4">Address</h3>
-              <p>Dhampur, Uttar Pradesh</p>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
-            <div class="align-self-stretch box p-4 text-center">
-              <div class="icon d-flex align-items-center justify-content-center">
-                <span class="icon-phone2"></span>
-              </div>
-              <h3 class="mb-4">Contact Number</h3>
-              <p>
-                <a href="tel://8433277137">+91 8433277137</a>
-              </p>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
-            <div class="align-self-stretch box p-4 text-center">
-              <div class="icon d-flex align-items-center justify-content-center">
-                <span class="icon-paper-plane"></span>
-              </div>
-              <h3 class="mb-4">Email Address</h3>
-              <p>
-                <a href="mailto:mayankpratapsingh137@gmail.com" target="_blank">mayankpratapsingh137@gmail.com</a>
-              </p>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
-            <div class="align-self-stretch box p-4 text-center">
-              <div class="icon d-flex align-items-center justify-content-center">
-                <span class="icon-globe"></span>
-              </div>
-              <h3 class="mb-4">Download Resume</h3>
-              <p>
-                <a href="https://drive.google.com/uc?export=download&id=1nH8I_-wqy53k5BRM455HeojbZRXrvhBb" target="_blank">Download PDF</a>
-              </p>
-            </div>
-          </div>
-
-          <div class="container">
-            <br>
-            <br>
-            <div class="row justify-content-center">
-              <div class="col-md-7 ftco-animate text-center">
-                <h2>Have a<span>
-                    Question?
-                  </span>
-                </h2>
-                <div class="que" id="send-message">
-                  <form action="https://api.web3forms.com/submit" method="POST">
-                    <input type="hidden" name="access_key" value="e4c761aa-5fad-4357-884d-6737fd5a92e9">
-                    <div class="row gy-4 gy-xl-5 p-4 p-xl-5">
-                      <div class="col-12">
-                        <label for="fullname" class="form-label">Full Name
-                          <span class="text-danger">*</span></label>
-                        <input type="text" class="form-control" id="fullname" name="fullname" value="" required="required">
-                      </div>
-                      <div class="col-12 col-md-6">
-                        <label for="email" class="form-label">Email
-                          <span class="text-danger">*</span></label>
-                        <div class="input-group">
-                          <span class="input-group-text">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope" viewbox="0 0 16 16">
-                              <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z"/>
-                            </svg>
-                          </span>
-                          <input type="email" class="form-control" id="email" name="email" value="" required="required">
-                        </div>
-                      </div>
-                      <div class="col-12 col-md-6">
-                        <label for="phone" class="form-label">Phone Number</label>
-                        <div class="input-group">
-                          <span class="input-group-text">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telephone" viewbox="0 0 16 16">
-                              <path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"/>
-                            </svg>
-                          </span>
-                          <input type="tel" class="form-control" id="phone" name="phone" value="">
-                        </div>
-                      </div><br>
-                      <div class="col-12">
-                        <label for="subject" class="form-label">Subject
-                          <span class="text-danger">*</span></label>
-                        <input type="text" class="form-control" id="subject" name="subject" value="" required="required">
-                      </div>
-                      <div class="col-12">
-                        <label for="message" class="form-label">Message
-                          <span class="text-danger">*</span></label>
-                        <textarea class="form-control" id="message" name="message" rows="3" required="required"></textarea>
-                      </div>
-                      <div class="col-12">
-                        <div class="d-grid"><br>
-                          <button class="btn btn-primary btn-lg" type="submit">Send Message</button>
-                        </div>
-                      </div>
-                    </div>
-                  </form>
-                </div>
-              </div>
-            </div>
-            <br>
-            <ul class="ftco-footer-social list-unstyled d-flex justify-content-center align-items-center mb-0">
-              <li class="ftco-animate normal-txt">Find me on
-              </li>
-              <!-- <li class="ftco-animate"> <a href="https://www.youtube.com/@RishabhMishraOfficial"> <span class="icon-youtube"></span></a> </li> -->
-              <li class="ftco-animate">
-                <a href="https://www.linkedin.com/in/iammayankpratapsingh/" target="_blank">
-                  <span class="icon-linkedin"></span></a>
-              </li>
-              <li class="ftco-animate">
-                <a href="https://x.com/iammayankps" target="_blank">
-                  <span class="icon-twitter"></span></a>
-              </li>
-              <!-- <li class="ftco-animate"> <a href="https://twitter.com/rishabhnmishra"> <span class="icon-facebook"></span></a> </li> -->
-              <li class="ftco-animate">
-                <a href="https://www.instagram.com/iammayankpratapsingh/" target="_blank">
-                  <span class="icon-instagram"></span></a>
-              </li>
-            </ul>
-            <br>
-          </div>
-        </div>
-      </section>
-
-      <footer class="ftco-footer ftco-section">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-12 text-center">
-
-              <p style="display: none;">
-                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                Copyright &copy;<script>
-                  document.write(new Date().getFullYear());
-                </script>
-                All rights reserved | This template is made with
-                <i class="icon-heart color-danger" aria-hidden="true"></i>
-                by
-                <a href="https://colorlib.com" target="_blank">Colorlib</a>
-                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-              </p>
-            </div>
-          </div>
-        </div>
-      </footer>
-
-      <!-- loader -->
-      <div id="ftco-loader" class="show fullscreen">
-        <svg class="circular" width="48px" height="48px">
-          <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/>
-          <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg>
       </div>
+    </section>
 
-      <script src="js/jquery.min.js"></script>
-      <script src="js/jquery-migrate-3.0.1.min.js"></script>
-      <script src="js/popper.min.js"></script>
-      <script src="js/bootstrap.min.js"></script>
-      <script src="js/jquery.easing.1.3.js"></script>
-      <script src="js/jquery.waypoints.min.js"></script>
-      <script src="js/jquery.stellar.min.js"></script>
-      <script src="js/owl.carousel.min.js"></script>
-      <script src="js/jquery.magnific-popup.min.js"></script>
-      <script src="js/aos.js"></script>
-      <script src="js/jquery.animateNumber.min.js"></script>
-      <script src="js/scrollax.min.js"></script>
+    <!-- ================= Experience ================= -->
+    <section class="section" id="experience" data-spy>
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Experience</span>
+          <h2>Where I’ve been building.</h2>
+        </div>
+        <div class="timeline">
+          <article class="tl-item reveal">
+            <div class="tl-when">
+              <span>Jul 2025 — Present</span>
+              <span class="now">Current role</span>
+            </div>
+            <div class="tl-what">
+              <h3>Application Lead</h3>
+              <p class="org"><a href="https://slimiot.com" target="_blank" rel="noopener">SlimIOT Technologies Pvt Ltd</a> · Healthtech &amp; IoT</p>
+              <ul>
+                <li>Lead architecture and end-to-end development of React Native apps for healthcare and wearable-device products, setting technical direction across the app and backend integration layers.</li>
+                <li>Design and implement BLE communication, MQTT data pipelines and cloud-connected device management for reliable, real-time health data from device to app to server.</li>
+                <li>Coordinate across firmware, hardware, backend and mobile teams to ship analytics features on a shared product timeline.</li>
+                <li>Build real-time monitoring dashboards and data-visualization modules for live patient and device telemetry.</li>
+              </ul>
+              <div class="tags"><span class="tag">React Native</span><span class="tag">BLE</span><span class="tag">MQTT</span><span class="tag">Node.js</span><span class="tag">MongoDB</span><span class="tag">Linode</span></div>
+            </div>
+          </article>
+          <article class="tl-item small reveal">
+            <div class="tl-when"><span>Oct 2023 — Jul 2025</span></div>
+            <div class="tl-what">
+              <h3>Master of Computer Applications (MCA)</h3>
+              <p class="org">NIET Greater Noida · CGPA 8.7</p>
+            </div>
+          </article>
+          <article class="tl-item small reveal">
+            <div class="tl-when"><span>Aug 2020 — Jun 2023</span></div>
+            <div class="tl-what">
+              <h3>Bachelor of Science (B.Sc.)</h3>
+              <p class="org">Gurukula Kangri Vishwavidyalaya, Haridwar · CGPA 9.01</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
 
-      <script src="js/main.js"></script>
-      <script>
-        function gitClick() {
-          window.location.href = 'https://github.com/iammayankpratapsingh';
-        }
-      </script>
+    <!-- ================= About ================= -->
+    <section class="section" id="about" data-spy>
+      <div class="container about-grid">
+        <figure class="portrait reveal" style="margin:0">
+          <img src="assets/img/mayank.webp" width="640" height="640" loading="lazy" alt="Portrait of Mayank Pratap Singh">
+          <figcaption>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>
+            India · works remotely
+          </figcaption>
+        </figure>
+        <div class="about-text">
+          <span class="eyebrow reveal">About</span>
+          <h2 class="reveal" style="margin-top:16px">I build the apps and dashboards people use to see their health data.</h2>
+          <div class="prose reveal">
+            <p>I’m Mayank, a full-stack and React Native engineer. Since July 2025 I’ve been <strong>Application Lead at SlimIOT Technologies</strong>, a healthtech startup whose hardware teams build connected devices: sleep monitors, wearables, a digital stethoscope and a GPS tracker. I build the software for them.</p>
+            <p>That means <strong>mobile apps and dashboards</strong> people actually read, the Node.js services behind them, and the app-side BLE and MQTT connections that get device data there reliably. I coordinate with the firmware and hardware teams every day, so features ship end to end.</p>
+          </div>
+          <dl class="facts reveal">
+            <div class="fact"><dt>Focus</dt><dd>Mobile apps, dashboards &amp; backends</dd></div>
+            <div class="fact"><dt>Languages</dt><dd>JavaScript, TypeScript, Python, C, SQL</dd></div>
+            <div class="fact full"><dt>Certifications</dt><dd>Sigma DSA with Java · React.js · Cloud Computing · MongoDB Data Modeling</dd></div>
+            <div class="fact full"><dt>Beyond code</dt><dd>Coordinated a technical event with 500+ participants</dd></div>
+          </dl>
+        </div>
+      </div>
+    </section>
 
-    </body>
+    <!-- ================= Process ================= -->
+    <section class="section" id="process">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">How I work</span>
+          <h2>Simple process, no surprises.</h2>
+        </div>
+        <ol class="process">
+          <li class="step reveal"><span class="n">01</span><h3>Understand</h3><p>The product, the users and the constraints, including any device the app needs to talk to.</p></li>
+          <li class="step reveal" style="--d:80ms"><span class="n">02</span><h3>Plan</h3><p>Architecture, data flow, user flows and a delivery plan you can follow.</p></li>
+          <li class="step reveal" style="--d:160ms"><span class="n">03</span><h3>Build</h3><p>Develop, integrate and test in small, visible increments.</p></li>
+          <li class="step reveal" style="--d:240ms"><span class="n">04</span><h3>Launch</h3><p>Deploy, monitor and keep improving after release.</p></li>
+        </ol>
+      </div>
+    </section>
 
-  </html>
+    <!-- ================= Contact ================= -->
+    <section class="section" id="contact" data-spy>
+      <div class="container">
+        <div class="contact reveal">
+          <div>
+            <span class="eyebrow">Contact</span>
+            <h2>Have a product idea? <span>Let’s turn it into something real.</span></h2>
+            <p class="lede">Whether you need a mobile app, a dashboard or an app for a connected device, I’m happy to talk through what you’re building. Hiring? I’d like to hear about the role.</p>
+            <div class="contact-actions">
+              <a class="btn btn-accent" href="mailto:mayankpratapsingh137@gmail.com">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+                Email me
+              </a>
+              <a class="btn" href="https://www.linkedin.com/in/iammayankpratapsingh/" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg>
+                LinkedIn
+              </a>
+              <a class="btn" href="https://github.com/iammayankpratapsingh" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .3a12 12 0 0 0-3.8 23.38c.6.12.83-.26.83-.57L9 21.07c-3.34.72-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.08-.74.09-.73.09-.73 1.2.09 1.83 1.24 1.83 1.24 1.07 1.83 2.81 1.3 3.5 1 .1-.78.42-1.31.76-1.61-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.14-.3-.54-1.52.1-3.18 0 0 1-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.28-1.55 3.29-1.23 3.29-1.23.64 1.66.24 2.88.12 3.18a4.65 4.65 0 0 1 1.23 3.22c0 4.61-2.8 5.63-5.48 5.92.42.36.81 1.1.81 2.22l-.01 3.29c0 .31.2.69.82.57A12 12 0 0 0 12 .3"/></svg>
+                GitHub
+              </a>
+            </div>
+            <div class="contact-lines">
+              <span><a href="mailto:mayankpratapsingh137@gmail.com">mayankpratapsingh137@gmail.com</a></span>
+              <span><a href="tel:+918433277137">+91 84332 77137</a></span>
+              <span><a href="assets/Mayank_Pratap_Singh_Resume.pdf" download>Download résumé (PDF)</a></span>
+            </div>
+          </div>
+
+          <form class="form" id="contact-form" action="https://api.web3forms.com/submit" method="POST">
+            <h3>Or send a quick message</h3>
+            <input type="hidden" name="access_key" value="e4c761aa-5fad-4357-884d-6737fd5a92e9">
+            <input type="hidden" name="subject" value="New message from iammayankpratapsingh.github.io">
+            <input type="hidden" name="from_name" value="Portfolio contact form">
+            <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+            <div class="row">
+              <div class="field"><label for="f-name">Name</label><input id="f-name" name="name" type="text" autocomplete="name" required></div>
+              <div class="field"><label for="f-email">Email</label><input id="f-email" name="email" type="email" autocomplete="email" required></div>
+            </div>
+            <div class="field"><label for="f-msg">What are you building?</label><textarea id="f-msg" name="message" required placeholder="A few lines about the product, timeline or role"></textarea></div>
+            <button class="btn btn-accent" type="submit">Send message
+              <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+            </button>
+            <p class="form-status" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© <span data-year>2026</span> Mayank Pratap Singh</p>
+      <nav aria-label="Footer">
+        <a href="https://github.com/iammayankpratapsingh" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.linkedin.com/in/iammayankpratapsingh/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="mailto:mayankpratapsingh137@gmail.com">Email</a>
+        <a href="assets/Mayank_Pratap_Singh_Resume.pdf" download>Résumé</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="assets/js/site.js" defer></script>
+</body>
+</html>
