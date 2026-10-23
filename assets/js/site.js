@@ -73,6 +73,34 @@
     document.querySelectorAll("[data-spy]").forEach(function (sec) { if (byId[sec.id]) spy.observe(sec); });
   }
 
+  /* ---------- Hero: open-source contributions (data lives in #oss-data) ---------- */
+  var ossData = document.getElementById("oss-data");
+  if (ossData) {
+    var esc = function (s) {
+      return String(s).replace(/[&<>"']/g, function (c) {
+        return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c];
+      });
+    };
+    var prs = [];
+    try { prs = JSON.parse(ossData.textContent); } catch (e) {}
+    var ext = ' target="_blank" rel="noopener noreferrer"';
+    var mergedList = document.querySelector("[data-oss-merged]");
+    var reviewList = document.querySelector("[data-oss-review]");
+    mergedList.innerHTML = prs.filter(function (p) { return p.status === "merged"; }).map(function (p) {
+      return '<li><a class="oss-card" href="' + esc(p.url) + '"' + ext + ' aria-label="' + esc(p.repo) + " PR #" + p.pr + ", merged: " + esc(p.summary) + '">' +
+        '<span class="oss-card-top"><strong>' + esc(p.repo) + '</strong><span class="oss-badge">Merged</span></span>' +
+        '<span class="oss-card-desc">' + esc(p.summary) + '</span>' +
+        '<span class="oss-card-meta"><span>' + esc(p.context || "") + '</span><span class="oss-pr">#' + p.pr + ' ↗</span></span>' +
+        '</a></li>';
+    }).join("");
+    reviewList.innerHTML = prs.filter(function (p) { return p.status === "review"; }).map(function (p) {
+      return '<li><a href="' + esc(p.url) + '"' + ext + ' title="' + esc(p.summary) + '" aria-label="' + esc(p.repo) + " PR #" + p.pr + ", in review: " + esc(p.summary) + '">' +
+        esc(p.repo) + ' <span class="oss-pr">#' + p.pr + '</span></a></li>';
+    }).join("");
+    if (reviewList.children.length) reviewList.insertAdjacentHTML("afterbegin", '<li class="oss-badge is-review" aria-hidden="true">In review</li>');
+    else reviewList.remove();
+  }
+
   /* ---------- Reveal on scroll ---------- */
   var reveals = document.querySelectorAll(".reveal");
   if (reduceMotion || !("IntersectionObserver" in window)) {
